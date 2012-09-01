@@ -1,0 +1,7 @@
+<manifest>
+<remote name="sakoman.com" fetch="git://www.sakoman.com/git"/>
+<default revision="refs/heads/denzil" remote="sakoman.com" sync-j="4"/>
+<project name="poky" remote="sakoman.com" path="poky"/>
+<project name="meta-openembedded" remote="sakoman.com" path="poky/meta-openembedded"/>
+<project name="meta-sakoman" remote="sakoman.com" path="poky/meta-sakoman"/>
+</manifest>

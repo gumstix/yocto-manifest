@@ -1,5 +1,5 @@
 <manifest>
-<remote name="github.com/adam-lee" fetch="git://github.com"/>
+<remote name="github.com/adam-lee" fetch="git://github.com/adam-lee"/>
 <default revision="refs/heads/denzil" remote="github.com/adam-lee/Gumstix-YoctoProject-Repo" sync-j="4"/>
 <project name="Gumstix-YoctoProject-Poky" remote="github.com/adam-lee" path="poky"/>
 <project name="Gumstix-YoctoProject-MetaOE" remote="github.com/adam-lee" path="poky/meta-openembedded"/>

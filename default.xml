@@ -1,6 +1,6 @@
 <manifest>
 <remote name="Gumstix-YoctoProject-Repo" fetch="git://github.com/adam-lee/Gumstix-YoctoProject-Repo"/>
-<default revision="refs/heads/denzil" remote="github.com/adam-lee" sync-j="4"/>
+<default revision="refs/heads/denzil" remote="github.com/adam-lee/Gumstix-YoctoProject-Repo" sync-j="4"/>
 <project name="Gumstix-YoctoProject-Poky" remote="github.com/adam-lee" path="poky"/>
 <project name="Gumstix-YoctoProject-MetaOE" remote="github.com/adam-lee" path="poky/meta-openembedded"/>
 <project name="Gumstix-YoctoProject-MetaGumstix" remote="github.com/adam-lee" path="poky/meta-sakoman"/>

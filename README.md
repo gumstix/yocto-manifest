@@ -14,52 +14,72 @@ it will fetch the git repositories specified in the manifest and, by doing so,
 setup a Yocto build environment for you!  Sweet deal!
 
 This document is a work-in-progress based on
- * http://www.sakoman.com/cgi-bin/gitweb.cgi?p=meta-sakoman.git;a=blob_plain;f=README;hb=denzil_
+
+ * http://www.sakoman.com/cgi-bin/gitweb.cgi?p=meta-sakoman.git;a=blob_plain;f=README;hb=denzil
  * https://github.com/adam-lee/Gumstix-YoctoProject-Repo/blob/master/README.md
 
 Getting Started
 ---------------
 1.  Install Repo.
+
     Download the Repo script.
+
         $ curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo > repo
+
     Make it executable.
+
         $ chmod a+x repo
+
     Move it on to your system path.
+
         $ sudo mv repo /usr/local/bin/
 
 2.  Initialize a Repo client.
+
     Create an empty directory to hold your working files.
+
         $ mkdir yocto
         $ cd yocto
+
     Tell Repo where to find the manifest
+
         $ repo init -u git://github.com/ashcharles/gumstix-yocto-manifest.git
+
     A successful initialization will end with a message stating that Repo is
     initialized in your working directory. Your client directory should now
     contain a .repo directory where files such as the manifest will be kept.
----
-    Note: You can use the '-b' switch to specify the branch of the repository
+    ***
+    **Note**
+    You can use the '-b' switch to specify the branch of the repository
     to use.  We develop on the guareenteed to break 'dev' branch.  The master
     branch should at least compile. The '-m' switch selects the manifest to use
     (default: 'default.xml').  Our default.xml is designed to be stable as it
     'pins' particular commits.  The current.xml tracks the head of all the
     manifest repositories.
+    ***
 
 3.  Fetch all the repositories.
+
         $ repo sync
+
     Now go put on the coffee machine as this may take 20 minutes depending on
     your connection.
 
 4.  Initialize the Yocto Environment.
+
     This just sets up some environment varibles but this means you'll need to
     do every time you want to develop with Yocto. Don't worry, if you forget,
     you'll get a warning like "THIS" when you try to run bitbake.
 
 5.  Build a shiny image.
+
     This process downloads several gigabytes of source code and then proceeds to
     do an awful lot of compilation so make sure you have plenty of space (15GB
     minimum), and expect a day or so of build time depending on your network
     connection.  Don't worry---it is just the first build that takes a while.
+
         $ bitbake overo-console-image
+
     If everything goes well, you should have a compressed root filesystem
     tarball as well as kernel and bootloader binaries available in your
     *work/deploy* directory.  If you run into problems, the most likely
@@ -69,14 +89,18 @@ Getting Started
 Staying Up to Date
 ------------------
 To pick up the latest changes for all source repositories, run:
+
     $ repo sync
+
 You can then rebuild as before:
+
     $ bitbake overo-console-image
 
 Starting from Fresh
 -------------------
 You borked it.  You're not really sure how.  But it doesn't work any more.
 There are several degrees of *starting fresh*.
+
  1. clean a package
  2. clean build tree
  3. clean sstate
@@ -90,7 +114,11 @@ To this, you'll want to customize the Repo manifest to point at different
 repositories and branches or pull in additional meta-layers.
 
 Clone this repository (or fork it on github):
+
     $ git clone git://github.com/ashcharles/gumstix-yocto-manifest.git
-Make your changes (and contribute them back if they are generally useful :) ), ad then re-initialize your repo client
+
+Make your changes (and contribute them back if they are generally useful :) ),
+and then re-initialize your repo client
+
     $ repo init -u <file:///path/to/your/git/repository.git>
 

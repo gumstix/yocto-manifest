@@ -50,11 +50,11 @@ Getting Started
     contain a .repo directory where files such as the manifest will be kept.
     ***
     **Note**
-    You can use the '-b' switch to specify the branch of the repository
-    to use.  We develop on the guareenteed to break 'dev' branch.  The master
-    branch should at least compile. The '-m' switch selects the manifest to use
-    (default: 'default.xml').  Our default.xml is designed to be stable as it
-    'pins' particular commits.  The current.xml tracks the head of all the
+    You can use the **-b** switch to specify the branch of the repository
+    to use.  We develop on the guaranteed-to-break *dev* branch.  The *master*
+    branch should at least compile. The **-m** switch selects the manifest file 
+    (default is *default.xml*).  Our default.xml is designed to be stable as it
+    *pins* particular commits.  The current.xml tracks the head of all the
     manifest repositories.
     ***
 
@@ -67,11 +67,12 @@ Getting Started
 
 4.  Initialize the Yocto Environment.
 
-    This just sets up some environment varibles but this means you'll need to
-    do every time you want to develop with Yocto. Don't worry, if you forget,
-    you'll get a warning like "THIS" when you try to run bitbake.
+        $ TEMPLATECONF=meta-gumstix/conf source ./poky/oe-init-build-env
+    This copies default configuration information into the *poky/build/conf*
+    directory and sets up some environment variables for Yocto.  You may
+    wish to edit the configuration options at this point.
 
-5.  Build a shiny image.
+5.  Build an image.
 
     This process downloads several gigabytes of source code and then proceeds to
     do an awful lot of compilation so make sure you have plenty of space (15GB
@@ -91,6 +92,14 @@ Staying Up to Date
 To pick up the latest changes for all source repositories, run:
 
     $ repo sync
+
+Enter the Yocto environment:
+
+    $ source poky/oe-init-build-env
+
+    If you forget to setup these environment variables prior to bitbaking,
+    your OS will complain that it can't find bitbake on the path.  Don't try
+    to install bitbake using a package manager, just run the command.
 
 You can then rebuild as before:
 

@@ -52,10 +52,14 @@ Getting Started
     **Note**
     You can use the **-b** switch to specify the branch of the repository
     to use.  We develop on the guaranteed-to-break *dev* branch.  The *master*
-    branch should at least compile. The **-m** switch selects the manifest file 
-    (default is *default.xml*).  Our default.xml is designed to be stable as it
-    *pins* particular commits.  The current.xml tracks the head of all the
-    manifest repositories.
+    branch should at least compile.
+    The **-m** switch selects the manifest file (default is *default.xml*).
+    Our default.xml is designed to be stable as it *pins* particular commits.
+    The current.xml tracks the head of all the manifest repositories.
+
+    To test out the bleeding edge, type:
+        $ repo init -u git://github.com/ashcharles/gumstix-yocto-manifest.git -b dev -m current.xml
+    This can be done in the current repo checkout.
     ***
 
 3.  Fetch all the repositories.

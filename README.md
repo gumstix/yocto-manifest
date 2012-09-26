@@ -16,6 +16,7 @@ setup a Yocto build environment for you!  Sweet deal!
 This document is a work-in-progress based on
 
  * http://www.sakoman.com/cgi-bin/gitweb.cgi?p=meta-sakoman.git;a=blob_plain;f=README;hb=denzil
+ * https://github.com/ashcharles/Gumstix-YoctoProject-Repo/blob/master/README.md
  * https://github.com/adam-lee/Gumstix-YoctoProject-Repo/blob/master/README.md
 
 Getting Started
@@ -43,7 +44,7 @@ Getting Started
 
     Tell Repo where to find the manifest
 
-        $ repo init -u git://github.com/ashcharles/gumstix-yocto-manifest.git
+        $ repo init -u git://github.com/gumstix/gumstix-yocto-manifest.git
 
     A successful initialization will end with a message stating that Repo is
     initialized in your working directory. Your client directory should now
@@ -60,7 +61,7 @@ Getting Started
 
     To test out the bleeding edge, type:
 
-        $ repo init -u git://github.com/ashcharles/gumstix-yocto-manifest.git -b dev -m current.xml
+        $ repo init -u git://github.com/gumstix/gumstix-yocto-manifest.git -b dev -m current.xml
 
     This can be done in the current repo checkout.
     ***
@@ -86,7 +87,7 @@ Getting Started
     minimum), and expect a day or so of build time depending on your network
     connection.  Don't worry---it is just the first build that takes a while.
 
-        $ bitbake overo-console-image
+        $ bitbake gumstix-console-image
 
     If everything goes well, you should have a compressed root filesystem
     tarball as well as kernel and bootloader binaries available in your
@@ -110,7 +111,7 @@ Enter the Yocto environment:
 
 You can then rebuild as before:
 
-    $ bitbake overo-console-image
+    $ bitbake gumstix-console-image
 
 Starting from Fresh
 -------------------
@@ -131,7 +132,7 @@ repositories and branches or pull in additional meta-layers.
 
 Clone this repository (or fork it on github):
 
-    $ git clone git://github.com/ashcharles/gumstix-yocto-manifest.git
+    $ git clone git://github.com/gumstix/gumstix-yocto-manifest.git
 
 Make your changes (and contribute them back if they are generally useful :) ),
 and then re-initialize your repo client

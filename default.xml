@@ -2,12 +2,14 @@
 <manifest>
   <!-- You can have as many remote repositories as you like -->
   <remote name="ash" fetch="git://github.com/ashcharles" />
-  <remote  name="sakoman" fetch="git://www.sakoman.com/git" />
+  <remote name="adam" fetch="git://github.com/adam-lee" />
+  <remote name="gumstix" fetch="git://github.com/gumstix" />
+  <remote name="sakoman" fetch="git://www.sakoman.com/git" />
   <remote name="yocto" fetch="git://git.yoctoproject.org" />
   <remote name="oe" fetch="git://github.com/openembedded" />
 
   <!-- Pick some default options to save typing below -->
-  <default revision="refs/heads/denzil" remote="ash" sync-j="4" />
+  <default revision="refs/heads/denzil" remote="adam" sync-j="4" />
 
   <!-- List all the repositories you want to fetch -->
   <!-- "name": git repository's name on hosting server
@@ -16,5 +18,5 @@
        "path": directory where git repository gets cloned/synced -->
   <project name="poky" remote="yocto" path="poky" />
   <project name="meta-oe" remote="oe" path="poky/meta-openembedded" />
-  <project name="meta-gumstix" path="poky/meta-gumstix" />
+  <project name="meta-gumstix" remote="adam" path="poky/meta-gumstix" />
 </manifest>

@@ -76,6 +76,7 @@ Getting Started
 4.  Initialize the Yocto Environment.
 
         $ TEMPLATECONF=meta-gumstix/conf source ./poky/oe-init-build-env
+
     This copies default configuration information into the *poky/build/conf*
     directory and sets up some environment variables for Yocto.  You may
     wish to edit the configuration options at this point.

@@ -18,5 +18,5 @@
        "path": directory where git repository gets cloned/synced -->
   <project name="poky" remote="yocto" path="poky" />
   <project name="meta-oe" remote="oe" path="poky/meta-openembedded" />
-  <project name="meta-gumstix" remote="adam" revision="refs/heads/master" path="poky/meta-gumstix" />
+  <project name="meta-gumstix" remote="adam" path="poky/meta-gumstix" />
 </manifest>

@@ -61,8 +61,16 @@ Getting Started
 
     To test out the bleeding edge, type:
 
-        $ repo init -u git://github.com/gumstix/gumstix-yocto-manifest.git -b dev -m current.xml
+        $ repo init -u git://github.com/gumstix/Gumstix-YoctoProject-Repo.git -b dev
+    
+    To test out the known stable version, type:
 
+        $ repo init -u git://github.com/gumstix/Gumstix-YoctoProject-Repo.git -b master
+
+    To use the stable version with hotfixes, type: 
+
+        $ repo init -u git://github.com/gumstix/Gumstix-YoctoProject-Repo.git -b maintenance
+       
     This can be done in the current repo checkout.
     ***
 

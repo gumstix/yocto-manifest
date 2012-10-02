@@ -6,7 +6,7 @@
   <remote name="oe" fetch="git://github.com/openembedded" />
 
   <!-- Pick some default options to save typing below -->
-  <default revision="refs/heads/denzil" remote="gumstix" sync-j="4" />
+  <default revision="refs/heads/master" remote="gumstix" sync-j="4" />
 
   <!-- List all the repositories you want to fetch -->
   <!-- "name": git repository's name on hosting server
@@ -15,5 +15,5 @@
        "path": directory where git repository gets cloned/synced -->
   <project name="poky" remote="yocto" path="poky" />
   <project name="meta-oe" remote="oe" path="poky/meta-openembedded" />
-  <project name="meta-gumstix" remote="adam" path="poky/meta-gumstix" />
+  <project name="meta-gumstix" remote="gumstix" path="poky/meta-gumstix" />
 </manifest>

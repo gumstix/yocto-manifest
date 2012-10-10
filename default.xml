@@ -6,7 +6,7 @@
   
   <default remote="gumstix" revision="refs/heads/denzil" sync-j="4"/>
   
-  <project groups="default" name="meta-gumstix" path="poky/meta-gumstix" revision="cbef75452a07bf762b31ebfe2097c45fb591f96c"/>
+  <project groups="default" name="meta-gumstix" path="poky/meta-gumstix" revision="8ddbe859e164b59355dd55cf6fa4c5e8a622c5b0"/>
   <project groups="default" name="meta-oe" path="poky/meta-openembedded" remote="oe" revision="5ca406f07866459cd91fd558a8c30dd9c3fc13df"/>
   <project groups="default" name="poky" remote="yocto" revision="e7d4eba0a9bc02d61a77129da4be2f0c9239884b"/>
 </manifest>

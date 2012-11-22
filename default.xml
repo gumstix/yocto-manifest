@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <!-- You can have as many remote repositories as you like -->
-  <remote name="gumstix" fetch="git://github.com/gumstix" />
+  <remote name="gumstix" fetch="git://github.com/adam-lee" />
   <remote name="yocto" fetch="git://git.yoctoproject.org" />
   <remote name="oe" fetch="git://github.com/openembedded" />
 
@@ -15,5 +15,6 @@
        "path": directory where git repository gets cloned/synced -->
   <project name="poky" remote="yocto" path="poky" />
   <project name="meta-oe" remote="oe" path="poky/meta-openembedded" />
-  <project name="meta-gumstix" remote="gumstix" path="poky/meta-gumstix" />
+  <project name="meta-gumstix-bsp" remote="adam-lee" path="poky/meta-gumstix-bsp" />
+  <project name="meta-gumstix-extras" remote="adam-lee" path="poky/meta-gumstix-extras" />
 </manifest>

@@ -6,7 +6,7 @@
   <remote name="oe" fetch="git://github.com/openembedded" />
 
   <!-- Pick some default options to save typing below -->
-  <default revision="refs/heads/master" remote="gumstix" sync-j="4" />
+  <default revision="refs/heads/master" remote="adam-lee" sync-j="4" />
 
   <!-- List all the repositories you want to fetch -->
   <!-- "name": git repository's name on hosting server

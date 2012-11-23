@@ -13,8 +13,8 @@
        "remote": the remote host from above (if not the default)
        "revision": commitish to checkout (if not the default)
        "path": directory where git repository gets cloned/synced -->
-  <project name="poky" remote="yocto" path="poky" />
-  <project name="meta-oe" remote="oe" path="poky/meta-openembedded" />
-  <project name="meta-gumstix-bsp" remote="adam-lee" path="poky/meta-gumstix-bsp" />
-  <project name="meta-gumstix-extras" remote="adam-lee" path="poky/meta-gumstix-extras" />
+  <project name="poky" remote="yocto" />
+  <project name="meta-oe" remote="oe" path="meta-openembedded" />
+  <project name="meta-gumstix-bsp" remote="adam-lee" path="meta-gumstix-bsp" />
+  <project name="meta-gumstix-extras" remote="adam-lee" path="meta-gumstix-extras" />
 </manifest>

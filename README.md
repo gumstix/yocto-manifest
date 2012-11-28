@@ -3,19 +3,26 @@ Gumstix Repo Manifests for Yocto Build System
 This repository provides Repo manifests to setup the Yocto build system for
 the Gumstix products.
 
+***
+**Note**
+If you already have a Yocto setup and want only the Gumstix BSP layer, use
+the meta-gumstix-bsp repository found here:
+git://github.com/ashcharles/meta-gumstix-bsp.git.
+***
+
 Yocto allows the creation of custom linux distributions for embedded systems
 including Gumstix-based systems.  It is a collection of git repositories known
-as *layers* each of which provides *recipes* to build software packages as well
+as **layers** each of which provides **recipes** to build software packages as well
 as configuration information.
 
 Repo is a tool that enables the management of many git repositories given a
-single *manifest* file.  Tell repo to fetch a manifest from this repository and
+single **manifest** file.  Tell Repo to fetch a manifest from this repository and
 it will fetch the git repositories specified in the manifest and, by doing so,
 setup a Yocto build environment for you!
 
 Getting Started
 ---------------
-1.  Install Repo.
+**1.  Install Repo.**
 
     Download the Repo script.
 
@@ -29,7 +36,7 @@ Getting Started
 
         $ sudo mv repo /usr/local/bin/
 
-2.  Initialize a Repo client.
+**2.  Initialize a Repo client.**
 
     Create an empty directory to hold your working files.
 
@@ -46,8 +53,8 @@ Getting Started
     ***
     **Note**
     You can use the **-b** switch to specify the branch of the repository
-    to use.  We develop on the guaranteed-to-break *dev* branch.  The *master*
-    branch should at least compile.
+    to use.  We develop on the guaranteed-to-break **dev** branch.  The
+    **master** branch should at least compile.
 
     The **-m** switch selects the manifest file (default is *default.xml*).
     Our default.xml on master is designed to be stable as it *pins*
@@ -64,22 +71,22 @@ Getting Started
     To learn more about repo, look at http://source.android.com/source/version-control.html 
     ***
 
-3.  Fetch all the repositories.
+**3.  Fetch all the repositories.**
 
         $ repo sync
 
-    Now go put on the coffee machine as this may take 20 minutes depending on
+    Now go turn on the coffee machine as this may take 20 minutes depending on
     your connection.
 
-4.  Initialize the Yocto Environment.
+**4.  Initialize the Yocto Environment.**
 
-        $ TEMPLATECONF=meta-gumstix/conf source ./poky/oe-init-build-env
+        $ TEMPLATECONF=meta-gumstix-extras/conf source ./poky/oe-init-build-env
 
-    This copies default configuration information into the *poky/build/conf*
+    This copies default configuration information into the **poky/build/conf**
     directory and sets up some environment variables for Yocto.  You may
     wish to edit the configuration options at this point.
 
-5.  Build an image.
+**5.  Build an image.**
 
     This process downloads several gigabytes of source code and then proceeds to
     do an awful lot of compilation so make sure you have plenty of space (25GB
@@ -90,10 +97,10 @@ Getting Started
 
     If everything goes well, you should have a compressed root filesystem
     tarball as well as kernel and bootloader binaries available in your
-    *work/deploy* directory.  If you run into problems, the most likely
-    candidate is missing packages.  Check out
+    **work/deploy** directory.  If you run into problems, the most likely
+    candidate is missing software packages.  Check out
     http://www.yoctoproject.org/docs/current/yocto-project-qs/yocto-project-qs.html#resources
-    for the list of required packagaes for operating system. Also, take
+    for the list of required packages for operating system. Also, take
     a look to be sure your operating system is supported:
     https://wiki.yoctoproject.org/wiki/Distribution_Support
 
@@ -119,19 +126,35 @@ Starting from Fresh
 -------------------
 So it is borked.  You're not really sure why.  But it doesn't work any more.
 
-There are several degrees of *starting fresh*.
+There are several degrees of **starting fresh**; individual packages can be
+rebuilt or the whole system can be reconstructed.  
 
  1. clean a package: bitbake <package-name> -c cleansstate
  2. re-download package: bitbake <package-name> -c cleanall
  3. destroy everything but downloads: rm -rf build (or whereever your sstate and work directories are)
  4. destroy it all (not recommended): rm -rf build && rm -rf sources
-There are several degrees of *starting fresh*.
+
+***
+**Note**
+If you've made a change to a recipe and want the package to be rebuilt, just
+increment the recipe version (the **PR** variable); cleaning is not necessary.
+***
+
+To make sense of the differences between these cleaning methods, it is useful
+to understand that Yocto caches both the downloaded source files for all the
+packages it tries to build (the **DL_DIR** configuration parameter) and the
+packages once built (the **SSTATE_DIR** configuration parameter).  Typically,
+deleting the downloaded source is a bad idea---this just means re-fetching
+gigabytes of code which wastes precious network bandwidth on servers of
+many open-source projects.  Cleaning the sstate cache for a particular package
+ensures that it actually gets rebuilt from source rather than simply restored
+from the cache. 
 
 Customize
 ---------
 Sooner or later, you'll want to customize some aspect of the image either
 adding more packages, picking up some upstream patches, or tweaking your kernel.
-To this, you'll want to customize the Repo manifest to point at different
+To this end, you'll want to customize the Repo manifest to point at different
 repositories and branches or pull in additional meta-layers.
 
 Clone this repository (or fork it on github):

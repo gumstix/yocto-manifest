@@ -24,85 +24,85 @@ Getting Started
 ---------------
 **1.  Install Repo.**
 
-    Download the Repo script.
+Download the Repo script.
 
-        $ curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo > repo
+    $ curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo > repo
 
-    Make it executable.
+Make it executable.
 
-        $ chmod a+x repo
+    $ chmod a+x repo
 
-    Move it on to your system path.
+Move it on to your system path.
 
-        $ sudo mv repo /usr/local/bin/
+    $ sudo mv repo /usr/local/bin/
 
 **2.  Initialize a Repo client.**
 
-    Create an empty directory to hold your working files.
+Create an empty directory to hold your working files.
 
-        $ mkdir yocto
-        $ cd yocto
+    $ mkdir yocto
+    $ cd yocto
 
-    Tell Repo where to find the manifest
+Tell Repo where to find the manifest
 
-        $ repo init -u git://github.com/gumstix/Gumstix-YoctoProject-Repo.git 
+    $ repo init -u git://github.com/gumstix/Gumstix-YoctoProject-Repo.git 
 
-    A successful initialization will end with a message stating that Repo is
-    initialized in your working directory. Your client directory should now
-    contain a .repo directory where files such as the manifest will be kept.
-    ***
-    **Note**
-    You can use the **-b** switch to specify the branch of the repository
-    to use.  We develop on the guaranteed-to-break **dev** branch.  The
-    **master** branch should at least compile.
+A successful initialization will end with a message stating that Repo is
+initialized in your working directory. Your client directory should now
+contain a .repo directory where files such as the manifest will be kept.
+***
+**Note**
+You can use the **-b** switch to specify the branch of the repository
+to use.  We develop on the guaranteed-to-break **dev** branch.  The
+**master** branch should at least compile.
 
-    The **-m** switch selects the manifest file (default is *default.xml*).
-    Our default.xml on master is designed to be stable as it *pins*
-    particular commits.
+The **-m** switch selects the manifest file (default is *default.xml*).
+Our default.xml on master is designed to be stable as it *pins*
+particular commits.
 
-    To test out the bleeding edge, type:
+To test out the bleeding edge, type:
 
-        $ repo init -u git://github.com/gumstix/Gumstix-YoctoProject-Repo.git -b dev
-    
-    To get back to the known stable version, type:
+    $ repo init -u git://github.com/gumstix/Gumstix-YoctoProject-Repo.git -b dev
 
-        $ repo init -u git://github.com/gumstix/Gumstix-YoctoProject-Repo.git -b master
+To get back to the known stable version, type:
+
+    $ repo init -u git://github.com/gumstix/Gumstix-YoctoProject-Repo.git -b master
 
     To learn more about repo, look at http://source.android.com/source/version-control.html 
     ***
 
 **3.  Fetch all the repositories.**
 
-        $ repo sync
+    $ repo sync
 
-    Now go turn on the coffee machine as this may take 20 minutes depending on
-    your connection.
+Now go turn on the coffee machine as this may take 20 minutes depending on
+your connection.
 
 **4.  Initialize the Yocto Environment.**
 
-        $ TEMPLATECONF=meta-gumstix-extras/conf source ./poky/oe-init-build-env
+    $ TEMPLATECONF=meta-gumstix-extras/conf source ./poky/oe-init-build-env
 
-    This copies default configuration information into the **poky/build/conf**
-    directory and sets up some environment variables for Yocto.  You may
-    wish to edit the configuration options at this point.
+This copies default configuration information into the **poky/build/conf**
+directory and sets up some environment variables for Yocto.  You may
+wish to edit the configuration options at this point.
 
 **5.  Build an image.**
 
-    This process downloads several gigabytes of source code and then proceeds to
-    do an awful lot of compilation so make sure you have plenty of space (25GB
-    minimum), and expect a day or so of build time depending on your network
-    connection.  Don't worry---it is just the first build that takes a while.
+This process downloads several gigabytes of source code and then proceeds to
+do an awful lot of compilation so make sure you have plenty of space (25GB
+minimum), and expect a day or so of build time depending on your network
+connection.  Don't worry---it is just the first build that takes a while.
 
-        $ bitbake gumstix-console-image
+    $ bitbake gumstix-console-image
 
-    If everything goes well, you should have a compressed root filesystem
-    tarball as well as kernel and bootloader binaries available in your
-    **work/deploy** directory.  If you run into problems, the most likely
-    candidate is missing software packages.  Check out
-    http://www.yoctoproject.org/docs/current/yocto-project-qs/yocto-project-qs.html#resources
-    for the list of required packages for operating system. Also, take
-    a look to be sure your operating system is supported:
-    https://wiki.yoctoproject.org/wiki/Distribution_Support
+If everything goes well, you should have a compressed root filesystem
+tarball as well as kernel and bootloader binaries available in your
+**work/deploy** directory.  If you run into problems, the most likely
+candidate is missing software packages.  Check out
+http://www.yoctoproject.org/docs/current/yocto-project-qs/yocto-project-qs.html#resources
+for the list of required packages for operating system. Also, take
+a look to be sure your operating system is supported:
+https://wiki.yoctoproject.org/wiki/Distribution_Support
 
 Staying Up to Date
 ------------------
@@ -114,9 +114,9 @@ Enter the Yocto environment:
 
     $ source poky/oe-init-build-env
 
-    If you forget to setup these environment variables prior to bitbaking,
-    your OS will complain that it can't find bitbake on the path.  Don't try
-    to install bitbake using a package manager, just run the command.
+If you forget to setup these environment variables prior to bitbaking,
+your OS will complain that it can't find bitbake on the path.  Don't try
+to install bitbake using a package manager, just run the command.
 
 You can then rebuild as before:
 
@@ -145,7 +145,7 @@ to understand that Yocto caches both the downloaded source files for all the
 packages it tries to build (the **DL_DIR** configuration parameter) and the
 packages once built (the **SSTATE_DIR** configuration parameter).  Typically,
 deleting the downloaded source is a bad idea---this just means re-fetching
-gigabytes of code which wastes precious network bandwidth on servers of
+gigabytes of code which wastes precious network bandwidth on the servers of
 many open-source projects.  Cleaning the sstate cache for a particular package
 ensures that it actually gets rebuilt from source rather than simply restored
 from the cache. 

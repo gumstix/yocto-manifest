@@ -17,4 +17,6 @@
   <project name="meta-oe" remote="oe" path="poky/meta-openembedded" />
   <project name="meta-gumstix" remote="gumstix" path="poky/meta-gumstix" />
   <project name="meta-gumstix-extras" remote="gumstix" path="poky/meta-gumstix-extras" />
+  <!-- Other useful repositories...add to bblayers.conf as needed -->
+  <project name="meta-ti" remote="yocto" path="poky/meta-ti" />
 </manifest>

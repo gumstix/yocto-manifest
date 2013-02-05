@@ -6,11 +6,11 @@ the Gumstix products.
 ***
 **Note**
 If you already have a Yocto setup and want only the Gumstix BSP layer, use
-the meta-gumstix-bsp repository found here:
-git://github.com/ashcharles/meta-gumstix-bsp.git.
+the meta-gumstix repository found here:
+git://github.com/gumstix/meta-gumstix.git.
 ***
 
-Yocto allows the creation of custom linux distributions for embedded systems
+Yocto allows the creation of custom Linux distributions for embedded systems
 including Gumstix-based systems.  It is a collection of git repositories known
 as **layers** each of which provides **recipes** to build software packages as well
 as configuration information.
@@ -36,6 +36,11 @@ Move it on to your system path.
 
     $ sudo mv repo /usr/local/bin/
 
+If it is correctly installed, you should see a Usage message when invoke it
+with the help flag.
+
+    $ repo --help
+
 **2.  Initialize a Repo client.**
 
 Create an empty directory to hold your working files.
@@ -48,8 +53,10 @@ Tell Repo where to find the manifest
     $ repo init -u git://github.com/gumstix/Gumstix-YoctoProject-Repo.git 
 
 A successful initialization will end with a message stating that Repo is
-initialized in your working directory. Your client directory should now
-contain a .repo directory where files such as the manifest will be kept.
+initialized in your working directory. Your directory should now
+contain a .repo directory where repo control files such as the manifest are
+stored but you should not need to touch this directory.
+
 ***
 **Note**
 You can use the **-b** switch to specify the branch of the repository
@@ -57,19 +64,21 @@ to use.  We develop on the guaranteed-to-break **dev** branch.  The
 **master** branch should at least compile.
 
 The **-m** switch selects the manifest file (default is *default.xml*).
-Our default.xml on master is designed to be stable as it *pins*
+Our default.xml on **master** is designed to be stable as it *pins*
 particular commits.
 
 To test out the bleeding edge, type:
 
     $ repo init -u git://github.com/gumstix/Gumstix-YoctoProject-Repo.git -b dev
+    $ repo sync
 
 To get back to the known stable version, type:
 
     $ repo init -u git://github.com/gumstix/Gumstix-YoctoProject-Repo.git -b master
+    $ repo sync
 
-    To learn more about repo, look at http://source.android.com/source/version-control.html 
-    ***
+To learn more about repo, look at http://source.android.com/source/version-control.html 
+***
 
 **3.  Fetch all the repositories.**
 
@@ -83,8 +92,9 @@ your connection.
     $ TEMPLATECONF=meta-gumstix-extras/conf source ./poky/oe-init-build-env
 
 This copies default configuration information into the **poky/build/conf**
-directory and sets up some environment variables for Yocto.  You may
-wish to edit the configuration options at this point.
+directory and sets up some environment variables for Yocto.  This configuration
+directory is not under revision control; you may wish to edit these configuration
+files for your specific setup.
 
 **5.  Build an image.**
 
@@ -116,7 +126,7 @@ Enter the Yocto environment:
 
 If you forget to setup these environment variables prior to bitbaking,
 your OS will complain that it can't find bitbake on the path.  Don't try
-to install bitbake using a package manager, just run the command.
+to install bitbake using a package manager, just run the command above.
 
 You can then rebuild as before:
 
@@ -124,10 +134,10 @@ You can then rebuild as before:
 
 Starting from Fresh
 -------------------
-So it is borked.  You're not really sure why.  But it doesn't work any more.
+So something broke...
 
 There are several degrees of **starting fresh**; individual packages can be
-rebuilt or the whole system can be reconstructed.  
+rebuilt or the whole system can be reconstructed.
 
  1. clean a package: bitbake <package-name> -c cleansstate
  2. re-download package: bitbake <package-name> -c cleanall
@@ -138,6 +148,9 @@ rebuilt or the whole system can be reconstructed.
 **Note**
 If you've made a change to a recipe and want the package to be rebuilt, just
 increment the recipe version (the **PR** variable); cleaning is not necessary.
+
+To understand better how bitbake processes recipes, look at the excellent
+documentation http://www.yoctoproject.org/docs/current/poky-ref-manual/poky-ref-manual.html.
 ***
 
 To make sense of the differences between these cleaning methods, it is useful
@@ -145,10 +158,9 @@ to understand that Yocto caches both the downloaded source files for all the
 packages it tries to build (the **DL_DIR** configuration parameter) and the
 packages once built (the **SSTATE_DIR** configuration parameter).  Typically,
 deleting the downloaded source is a bad idea---this just means re-fetching
-gigabytes of code which wastes precious network bandwidth on the servers of
-many open-source projects.  Cleaning the sstate cache for a particular package
-ensures that it actually gets rebuilt from source rather than simply restored
-from the cache. 
+gigabytes of code which wastes network bandwidth.  Cleaning the sstate cache
+for a particular package ensures that it actually gets rebuilt from source
+rather than simply restored from the cache. 
 
 Customize
 ---------

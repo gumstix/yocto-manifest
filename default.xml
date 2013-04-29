@@ -7,7 +7,8 @@
 
   <!-- Pick some default options to save typing below -->
   <default revision="refs/heads/danny" remote="gumstix" sync-j="4" />
-  <default branch="dylan" remote="yocto" sync-j="4" />
+  <default revision="refs/heads/dylan" remote="oe" sync-j="4" />
+  <default revision="refs/heads/dylan" remote="yocto" sync-j="4" />
 
   <!-- List all the repositories you want to fetch -->
   <!-- "name": git repository's name on hosting server

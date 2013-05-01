@@ -7,17 +7,17 @@
 
   <!-- Pick some default options to save typing below -->
   <default revision="refs/heads/danny" remote="gumstix" sync-j="4" />
-  <default revision="refs/heads/dylan" remote="yocto" sync-j="4" />
 
   <!-- List all the repositories you want to fetch -->
   <!-- "name": git repository's name on hosting server
        "remote": the remote host from above (if not the default)
        "revision": commitish to checkout (if not the default)
        "path": directory where git repository gets cloned/synced -->
-  <project name="poky" remote="yocto" />
-  <project name="meta-oe" remote="oe" path="poky/meta-openembedded" />
-  <project name="meta-gumstix" remote="gumstix" path="poky/meta-gumstix" />
-  <project name="meta-gumstix-extras" remote="gumstix" path="poky/meta-gumstix-extras" />
+  <project name="meta-gumstix" path="poky/meta-gumstix" revision="e373f9c91ba7e3719676bfdd3f8f9c87a7b3284c" upstream="refs/heads/danny"/>
+  <project name="meta-gumstix-extras" path="poky/meta-gumstix-extras" revision="2a8423ae62f44183c52dac6e119c8581d26f6fce" upstream="refs/heads/danny"/>
+  <project name="meta-oe" path="poky/meta-openembedded" remote="oe" revision="34e5537e67b655b8d2effbbecc207d88eea52b87" upstream="refs/heads/danny"/>
+  <project name="poky" remote="yocto" revision="2806646a263527ec0487ea160afd4bdc0a3c1703" upstream="refs/heads/danny"/>
+
   <!-- Other useful repositories...add to bblayers.conf as needed -->
-  <project name="meta-ti" remote="yocto" path="poky/meta-ti" />
+  <project name="meta-ti" path="poky/meta-ti" remote="yocto" revision="f2afcfee588adb594bc46a36d4e4443adb1be64f" upstream="refs/heads/danny"/>
 </manifest>

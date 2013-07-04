@@ -5,18 +5,14 @@
   <remote name="yocto" fetch="git://git.yoctoproject.org" />
   <remote name="oe" fetch="git://github.com/openembedded" />
 
-  <!-- Pick some default options to save typing below -->
-  <default revision="refs/heads/danny" remote="gumstix" sync-j="4" />
-
   <!-- List all the repositories you want to fetch -->
   <!-- "name": git repository's name on hosting server
        "remote": the remote host from above (if not the default)
        "revision": commitish to checkout (if not the default)
        "path": directory where git repository gets cloned/synced -->
-  <project name="poky" remote="yocto" />
-  <project name="meta-oe" remote="oe" path="poky/meta-openembedded" />
-  <project name="meta-gumstix" remote="gumstix" path="poky/meta-gumstix" />
-  <project name="meta-gumstix-extras" remote="gumstix" path="poky/meta-gumstix-extras" />
-  <!-- Other useful repositories...add to bblayers.conf as needed -->
-  <project name="meta-ti" remote="yocto" path="poky/meta-ti" />
+  <project name="poky" revision="refs/heads/dylan" remote="yocto" />
+  <project name="meta-oe" revision="refs/heads/dylan"  remote="oe" path="poky/meta-openembedded" />
+  <project name="meta-gumstix" revision="refs/heads/dylan"  remote="gumstix" path="poky/meta-gumstix" />
+  <project name="meta-gumstix-extras" revision="refs/heads/dylan" remote="gumstix" path="poky/meta-gumstix-extras" />
 </manifest>
+

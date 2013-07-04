@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <!-- You can have as many remote repositories as you like -->
-  <remote name="gumstix" fetch="git://github.com/adam-lee" />
+  <remote name="gumstix" fetch="git://github.com/gumstix" />
   <remote name="yocto" fetch="git://git.yoctoproject.org" />
   <remote name="oe" fetch="git://github.com/openembedded" />
 

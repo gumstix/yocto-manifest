@@ -26,7 +26,7 @@ Getting Started
 
 Download the Repo script:
 
-    $ curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo > repo
+    $ curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > repo
 
 Make it executable:
 

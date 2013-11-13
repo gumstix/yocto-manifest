@@ -11,10 +11,10 @@
        "remote": the remote host from above (if not the default)
        "revision": commitish to checkout (if not the default)
        "path": directory where git repository gets cloned/synced -->
-  <project name="poky" revision="refs/heads/dylan" remote="yocto" />
-  <project name="meta-oe" revision="refs/heads/dylan"  remote="oe" path="poky/meta-openembedded" />
-  <project name="meta-gumstix" revision="refs/heads/dylan"  remote="gumstix" path="poky/meta-gumstix" />
-  <project name="meta-gumstix-extras" revision="refs/heads/dylan" remote="gumstix" path="poky/meta-gumstix-extras" />
+  <project name="poky" revision="refs/heads/dora" remote="yocto" />
+  <project name="meta-oe" revision="refs/heads/dora"  remote="oe" path="poky/meta-openembedded" />
+  <project name="meta-gumstix" revision="refs/heads/dora"  remote="gumstix" path="poky/meta-gumstix" />
+  <project name="meta-gumstix-extras" revision="refs/heads/dora" remote="gumstix" path="poky/meta-gumstix-extras" />
   <project name="meta-ros" revision="refs/heads/master"  remote="ros" path="poky/meta-ros" />
 
 </manifest>

@@ -14,7 +14,7 @@
   <project name="meta-oe" revision="refs/heads/dora"  remote="oe" path="poky/meta-openembedded" />
   <project name="meta-gumstix" revision="refs/heads/dora"  remote="gumstix" path="poky/meta-gumstix" />
   <project name="meta-gumstix-extras" revision="refs/heads/dora" remote="gumstix" path="poky/meta-gumstix-extras" />
-  <project name="meta-ti" revision="refs/heads/master"  remote="yocto" path="poky/meta-ti" />
+  <project name="meta-ti" revision="refs/heads/dora"  remote="yocto" path="poky/meta-ti" />
 
 </manifest>
 

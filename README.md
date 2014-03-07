@@ -94,7 +94,7 @@ your connection.
 This copies default configuration information into the **poky/build/conf**
 directory and sets up some environment variables for the build system.  This configuration
 directory is not under revision control; you may wish to edit these configuration
-files for your specific setup. In particular, change the `MACHINE` variable in `conf/local.conf` if you are
+files for your specific setup. In particular, change the `MACHINE` variable in **conf/local.conf** if you are
 not building for the Overo (default).
 
 **5.  Build an image:**

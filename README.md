@@ -119,7 +119,7 @@ https://wiki.yoctoproject.org/wiki/Distribution_Support
 **6. Create a bootable micro SD card:**
 
 You are one step closer to booting your Gumstix with the new image you built! 
-First you have to create two partitions: boot and rootfs. We have included 
+First you have to create two partitions: `boot` and `rootfs`. We have included 
 a small script to help you out with it. Change your directory to 
 `meta-gumstix-extras/scripts` and you should see a shell script named mk2partsd.
 Pop in your micro SD card to your card writer, and find out the location of 

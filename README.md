@@ -132,7 +132,7 @@ the drives.
 
 Once this is successful, go ahead and mount both the drives. 
 
-**7. Flash Yocto image: **
+**7. Flash Yocto image:**
 
 First you have to go the deploy directory as mentioned in step 5. 
 

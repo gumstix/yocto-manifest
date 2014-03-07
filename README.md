@@ -121,7 +121,7 @@ https://wiki.yoctoproject.org/wiki/Distribution_Support
 You are one step closer to booting your Gumstix with the new image you built! 
 First you have to create two partitions: `boot` and `rootfs`. We have included 
 a small script to help you out with it. Change your directory to 
-`meta-gumstix-extras/scripts` and you should see a shell script named mk2partsd.
+**poky/meta-gumstix-extras/scripts** and you should see a shell script named mk2partsd.
 Pop in your micro SD card to your card writer, and find out the location of 
 the block device by running `dmesg`. Now you can run the script as following:
 

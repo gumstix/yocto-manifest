@@ -177,8 +177,8 @@ rebuilt or the whole system can be reconstructed.
 
  1. clean a package: bitbake <package-name> -c cleansstate
  2. re-download package: bitbake <package-name> -c cleanall
- 3. destroy everything but downloads: rm -rf build (or whereever your sstate and work directories are)
- 4. destroy it all (not recommended): rm -rf build && rm -rf sources
+ 3. destroy everything but downloads: rm -rf build/sstate-cache build/tmp (or wherever your sstate and work directories are)
+ 4. destroy it all (not recommended): rm -rf build
 
 ***
 **Note:**

@@ -132,7 +132,7 @@ the drives.
 
 Once this is successful, go ahead and mount both the drives. 
 
-**7. Flash Yocto image:**
+**7. Flash your image:**
 
 Almost there. Now you just have to populate the card with the image you built. 
 Go to the deploy directory as mentioned in step 5:

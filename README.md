@@ -108,12 +108,45 @@ connection.  Don't worry---it is just the first build that takes a while.
 
 If everything goes well, you should have a compressed root filesystem
 tarball as well as kernel and bootloader binaries available in your
-**work/deploy** directory.  If you run into problems, the most likely
+**tmp/deploy/images/{overo|duovero|pepper}** directory.  If you run into problems, the most likely
 candidate is missing software packages.  Check out
 http://www.yoctoproject.org/docs/current/yocto-project-qs/yocto-project-qs.html#resources
 for the list of required packages for operating system. Also, take
 a look to be sure your operating system is supported:
 https://wiki.yoctoproject.org/wiki/Distribution_Support
+
+
+**6. Create a bootable micro SD card:**
+
+You are one step closer to booting your Gumstix with the new image you built! 
+First you have to create two partitions: boot and rootfs. We have included 
+a small script to help you out with it. Change your directory to 
+`meta-gumstix-extras/scripts` and you should see a shell script named mk2partsd.
+Pop in your micro SD card to your card writer, and find out the location of 
+the block device by running `dmesg`. Now you can run the script as following:
+
+    $ sudo ./mk2partsd <block device> 
+    
+If you get an error, make sure your operating system has not automatically mounted 
+the drives. 
+
+Once this is successful, go ahead and mount both the drives. 
+
+**7. Flash Yocto image: **
+
+First you have to go the deploy directory as mentioned in step 5. 
+
+    $ cd build/tmp/deploy/images/{overo|duovero|pepper}   
+    
+Now you can write the bootloader, kernel and the root file system into your card
+
+    $ cp MLO u-boot.img uImage /media/boot 
+    $ sudo tar xaf gumstix-console-image.tar.bz2 -C /media/rootfs --strip-components=1
+
+And you should make sure all the files are written
+
+    $ sync
+
 
 Staying Up to Date
 ------------------

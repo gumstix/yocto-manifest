@@ -134,19 +134,21 @@ Once this is successful, go ahead and mount both the drives.
 
 **7. Flash Yocto image:**
 
-First you have to go the deploy directory as mentioned in step 5. 
+Almost there. Now you just have to populate the card with the image you built. 
+Go to the deploy directory as mentioned in step 5:
 
     $ cd build/tmp/deploy/images/{overo|duovero|pepper}   
     
-Now you can write the bootloader, kernel and the root file system into your card
+Write the bootloader, kernel and the root file system into your card:
 
     $ cp MLO u-boot.img uImage /media/boot 
     $ sudo tar xaf gumstix-console-image.tar.bz2 -C /media/rootfs --strip-components=1
 
-And you should make sure all the files are written
+And you should make sure all the files are written:
 
     $ sync
 
+Hooray you are done!
 
 Staying Up to Date
 ------------------

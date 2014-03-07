@@ -108,7 +108,7 @@ connection.  Don't worry---it is just the first build that takes a while.
 
 If everything goes well, you should have a compressed root filesystem
 tarball as well as kernel and bootloader binaries available in your
-**tmp/deploy/images/{overo|duovero|pepper}** directory.  If you run into problems, the most likely
+**tmp/deploy/images/{ overo | duovero | pepper }** directory.  If you run into problems, the most likely
 candidate is missing software packages.  Check out
 http://www.yoctoproject.org/docs/current/yocto-project-qs/yocto-project-qs.html#resources
 for the list of required packages for operating system. Also, take

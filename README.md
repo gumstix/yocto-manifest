@@ -89,7 +89,8 @@ your connection.
 
 **4.  Initialize the Yocto Project Build Environment.**
 
-    $ TEMPLATECONF=meta-gumstix-extras/conf source ./poky/oe-init-build-env
+    $ export TEMPLATECONF=meta-gumstix-extras/conf 
+    $ source ./poky/oe-init-build-env
 
 This copies default configuration information into the **poky/build/conf**
 directory and sets up some environment variables for the build system.  This configuration

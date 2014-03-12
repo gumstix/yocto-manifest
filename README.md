@@ -77,6 +77,12 @@ To get back to the known stable version, type:
     $ repo init -u git://github.com/gumstix/Gumstix-YoctoProject-Repo.git -b master
     $ repo sync
 
+Also you can get a specific version of Yocto Project:
+
+For example,
+
+    $ repo init -u git://github.com/gumstix/Gumstix-YoctoProject-Repo.git -b refs/tags/danny
+    
 To learn more about repo, look at http://source.android.com/source/version-control.html 
 ***
 

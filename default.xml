@@ -3,15 +3,15 @@
   <!-- You can have as many remote repositories as you like -->
   <remote name="gumstix" fetch="git://github.com/gumstix" />
   <remote name="yocto" fetch="git://git.yoctoproject.org" />
-  <remote name="oe" fetch="git://github.com/openembedded" />
-  
+  <remote name="oe" fetch="git://git.openembedded.org" />
+
   <!-- List all the repositories you want to fetch -->
   <!-- "name": git repository's name on hosting server
        "remote": the remote host from above (if not the default)
        "revision": commitish to checkout (if not the default)
        "path": directory where git repository gets cloned/synced -->
-  <project name="poky" revision="refs/heads/master" remote="yocto" />
-  <project name="meta-oe" revision="refs/heads/master"  remote="oe" path="poky/meta-openembedded" />
+  <project name="poky" revision="refs/heads/master-next" remote="yocto" />
+  <project name="meta-openembedded" revision="refs/heads/master-next"  remote="oe" path="poky/meta-openembedded" />
   <project name="meta-gumstix" revision="refs/heads/next"  remote="gumstix" path="poky/meta-gumstix" />
   <project name="meta-gumstix-extras" revision="refs/heads/next" remote="gumstix" path="poky/meta-gumstix-extras" />
   <project name="meta-ti" revision="refs/heads/master"  remote="yocto" path="poky/meta-ti" />

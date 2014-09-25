@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+  <default remote="gumstix" revision="default" />
+
   <!-- You can have as many remote repositories as you like -->
   <remote name="gumstix" fetch="git://github.com/gumstix" />
   <remote name="yocto" fetch="git://git.yoctoproject.org" />

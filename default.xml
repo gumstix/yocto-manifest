@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+  <default remote="gumstix" revision="default" />
+
   <!-- You can have as many remote repositories as you like -->
   <remote name="gumstix" fetch="git://github.com/gumstix" />
   <remote name="yocto" fetch="git://git.yoctoproject.org" />
@@ -11,12 +13,12 @@
        "remote": the remote host from above (if not the default)
        "revision": commitish to checkout (if not the default)
        "path": directory where git repository gets cloned/synced -->
-  <project name="poky" revision="refs/heads/daisy" remote="yocto" />
-  <project name="meta-openembedded" revision="refs/heads/daisy"  remote="oe" path="poky/meta-openembedded" />
-  <project name="meta-gumstix" revision="refs/heads/daisy"  remote="gumstix" path="poky/meta-gumstix" />
-  <project name="meta-gumstix-extras" revision="refs/heads/daisy" remote="gumstix" path="poky/meta-gumstix-extras" />
-  <project name="meta-ti" revision="refs/heads/daisy"  remote="yocto" path="poky/meta-ti" />
-  <project name="meta-ros" revision="821427d23adb33674da76dc34d8ab6983590fcd4"  remote="bmwcarit" path="poky/meta-ros" />
+  <project name="poky" revision="refs/heads/dizzy" remote="yocto" />
+  <project name="meta-openembedded" revision="refs/heads/dizzy"  remote="oe" path="poky/meta-openembedded" />
+  <project name="meta-gumstix" revision="refs/heads/dizzy"  remote="gumstix" path="poky/meta-gumstix" />
+  <project name="meta-gumstix-extras" revision="refs/heads/dizzy" remote="gumstix" path="poky/meta-gumstix-extras" />
+  <project name="meta-ti" revision="refs/heads/master"  remote="yocto" path="poky/meta-ti" />
+  <project name="meta-ros" revision="refs/heads/master"  remote="bmwcarit" path="poky/meta-ros" />
 
 </manifest>
 

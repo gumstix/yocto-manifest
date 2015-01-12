@@ -148,8 +148,11 @@ Go to the deploy directory as mentioned in step 5:
     
 Write the bootloader, kernel and the root file system into your card:
 
-    $ cp MLO u-boot.img uImage /media/boot 
+    $ cp MLO u-boot.img /media/boot
     $ sudo tar xaf gumstix-console-image.tar.bz2 -C /media/rootfs --strip-components=1
+
+Note that in Gumstix Yocto Project 1.7, you no longer have to copy the kernel image into `/media/boot`.
+A kernel image (zImage) is included in the root file system.
 
 And you should make sure all the files are written:
 
@@ -194,7 +197,7 @@ increment the recipe version (the PR variable); cleaning is not necessary.
 
 To understand better how bitbake processes recipes, look at the excellent 
 documentation:
-http://www.yoctoproject.org/docs/current/poky-ref-manual/poky-ref-manual.html.
+http://www.yoctoproject.org/docs/current/ref-manual/ref-manual.html.
 ***
 
 To make sense of the differences between these cleaning methods, it is useful to

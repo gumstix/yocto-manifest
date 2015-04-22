@@ -50,7 +50,7 @@ Create an empty directory to hold your working files:
 
 Tell Repo where to find the manifest:
 
-    $ repo init -u git://github.com/gumstix/Gumstix-YoctoProject-Repo.git 
+    $ repo init -u git://github.com/gumstix/yocto-manifest.git 
 
 A successful initialization will end with a message stating that Repo is
 initialized in your working directory. Your directory should now
@@ -69,19 +69,19 @@ particular commits.
 
 To test out the bleeding edge, type:
 
-    $ repo init -u git://github.com/gumstix/Gumstix-YoctoProject-Repo.git -b dev
+    $ repo init -u git://github.com/gumstix/yocto-manifest.git -b dev
     $ repo sync
 
 To get back to the known stable version, type:
 
-    $ repo init -u git://github.com/gumstix/Gumstix-YoctoProject-Repo.git -b master
+    $ repo init -u git://github.com/gumstix/yocto-manifest.git -b master
     $ repo sync
 
 Also you can get a specific version of Yocto Project:
 
 For example,
 
-    $ repo init -u git://github.com/gumstix/Gumstix-YoctoProject-Repo.git -b refs/tags/danny
+    $ repo init -u git://github.com/gumstix/yocto-manifest.git -b refs/tags/danny
     
 To learn more about repo, look at http://source.android.com/source/version-control.html 
 ***
@@ -218,7 +218,7 @@ repositories and branches or pull in additional meta-layers.
 
 Clone this repository (or fork it on github):
 
-    $ git clone git://github.com/gumstix/Gumstix-YoctoProject-Repo.git
+    $ git clone git://github.com/gumstix/yocto-manifest.git
 
 Make your changes (and contribute them back if they are generally useful), and
 then re-initialize your repo client

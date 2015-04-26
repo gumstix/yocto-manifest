@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <default remote="gumstix" revision="default" />
-
   <!-- You can have as many remote repositories as you like -->
-  <remote name="gumstix" fetch="git://github.com/gumstix" />
-  <remote name="yocto" fetch="git://git.yoctoproject.org" />
-  <remote name="oe" fetch="git://git.openembedded.org" />
-  <remote name="bmwcarit" fetch="git://github.com/bmwcarit" />
+  <remote fetch="git://github.com/bmwcarit" name="bmwcarit"/>
+  <remote fetch="git://github.com/gumstix" name="gumstix"/>
+  <remote fetch="git://git.openembedded.org" name="oe"/>
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
 
+  <default remote="gumstix" revision="default"/>
   <!-- List all the repositories you want to fetch -->
   <!-- "name": git repository's name on hosting server
        "remote": the remote host from above (if not the default)
        "revision": commitish to checkout (if not the default)
        "path": directory where git repository gets cloned/synced -->
-  <project name="poky" revision="refs/heads/dizzy" remote="yocto" />
-  <project name="meta-openembedded" revision="refs/heads/dizzy"  remote="oe" path="poky/meta-openembedded" />
-  <project name="meta-gumstix" revision="refs/heads/dizzy"  remote="gumstix" path="poky/meta-gumstix" />
-  <project name="meta-gumstix-extras" revision="refs/heads/dizzy" remote="gumstix" path="poky/meta-gumstix-extras" />
-  <project name="meta-ti" revision="refs/heads/master"  remote="yocto" path="poky/meta-ti" />
-  <project name="meta-ros" revision="refs/heads/master"  remote="bmwcarit" path="poky/meta-ros" />
+  <project name="meta-gumstix" path="poky/meta-gumstix" revision="4467b22f64acbeaa8433f7cd502b6b94af525dc7" upstream="refs/heads/dizzy"/>
+  <project name="meta-gumstix-extras" path="poky/meta-gumstix-extras" revision="a030aa1397ce0e437061e5ced23f12e2d2c7d354" upstream="refs/heads/dizzy"/>
+  <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe" revision="2ebb8752f378c9987b0ece5a14915d703b872c1d" upstream="refs/heads/dizzy"/>
+  <project name="meta-ros" path="poky/meta-ros" remote="bmwcarit" revision="312e6c4ddd76f56fce22a7b9b1a5b0fd8d39c224" upstream="refs/heads/master"/>
+  <project name="meta-ti" path="poky/meta-ti" remote="yocto" revision="0a47b71b8c4222ca5136584aed15acbc218b199e" upstream="refs/heads/master"/>
+  <project name="poky" remote="yocto" revision="3037db60f79a4b7e34bef14663ffa2523e9f0c03" upstream="refs/heads/dizzy"/>
+
 
 </manifest>
 

@@ -12,8 +12,8 @@
        "remote": the remote host from above (if not the default)
        "revision": commitish to checkout (if not the default)
        "path": directory where git repository gets cloned/synced -->
-  <project name="meta-gumstix" path="poky/meta-gumstix" revision="5e7cecbcb7fa292a11c2e97beac4e7910ad720d0" upstream="refs/heads/dizzy"/>
-  <project name="meta-gumstix-extras" path="poky/meta-gumstix-extras" revision="08312042bf52761136f6d22673802db2d3bc1bac" upstream="refs/heads/dizzy"/>
+  <project name="meta-gumstix" path="poky/meta-gumstix" revision="2a5c6f15f84dbce7a8aba613c6cdd8a1047efc27" upstream="refs/heads/dizzy"/>
+  <project name="meta-gumstix-extras" path="poky/meta-gumstix-extras" revision="8b24e2e1a1e1471fdc000210dcbb115f9a44b0fe" upstream="refs/heads/dizzy"/>
   <project name="meta-java" path="poky/meta-java" remote="yocto" revision="4aea395deed99b2725b56d4a86fb4712fcf504d7" upstream="refs/heads/master"/>
   <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe" revision="5b6f39ce325d490fc382d5d59c5b8b9d5fa38b38" upstream="refs/heads/dizzy"/>
   <project name="meta-ros" path="poky/meta-ros" remote="bmwcarit" revision="ca9e784210a89dc1c53054e4c597bfb463f72ef0" upstream="refs/heads/master"/>

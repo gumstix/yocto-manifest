@@ -131,17 +131,20 @@ Optionally you may want to create a swap partition.
 Yocto Project comes with a small utility called `wic` to help you out with this process.
 Here is a generic workflow using the Gumstix kickstart file:
 
-    $ wic create sdimage-gumstix.wks -e gumstix-console-image
+    $ wic create sdimage-gumstix -e gumstix-console-image
 
     Info: The new image(s) can be found here:
      /var/tmp/wic/build/sdimage-gumstix-201506231742-mmcblk.direct
 
 The kickstart file `sdimage-gumstix.wks` describes the layout of the storage. It is located here:
-```meta-gumstix-extras/scripts/lib/image/canned-wks/```
+
+    meta-gumstix-extras/scripts/lib/image/canned-wks/
+
 By default, it creates a DD-able image (`.direct`) with boot, root and swap partitions. It fits into a 2GB large uSD card.
 You can tweak the size parameter (--size) in the kickstart file to match the size of the image to your micro-SD card.
 
 **7. Flash your image:**
+
 Note that your uSD will have to be at least 2GB large. Pop in your micro SD card to your card writer, and find out the location of
 the block device by running `dmesg`. Now you can run the script as following:
 

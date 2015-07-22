@@ -126,37 +126,31 @@ https://wiki.yoctoproject.org/wiki/Distribution_Support
 **6. Create a bootable micro SD card:**
 
 You are one step closer to booting your Gumstix with the new image you built! 
-First you have to create two partitions: `boot` and `rootfs`. We have included 
-a small script to help you out with it. Change your directory to 
-**poky/meta-gumstix-extras/scripts** and you should see a shell script named mk2partsd.
-Pop in your micro SD card to your card writer, and find out the location of 
-the block device by running `dmesg`. Now you can run the script as following:
+Usually you have to create two partitions in your uSD: `boot` and `root`, and copy the bootloader and the root file system.
+Optionally you may want to create a swap partition.
+Yocto Project comes with a small utility called `wic` to help you out with this process.
+Here is a generic workflow using the Gumstix kickstart file:
 
-    $ sudo ./mk2partsd <block device> 
-    
-If you get an error, make sure your operating system has not automatically mounted 
-the drives. 
+    $ wic create sdimage-gumstix -e gumstix-console-image
 
-Once this is successful, go ahead and mount both the drives. 
+    Info: The new image(s) can be found here:
+     /var/tmp/wic/build/sdimage-gumstix-201506231742-mmcblk.direct
+
+The kickstart file `sdimage-gumstix.wks` describes the layout of the storage. It is located here:
+
+    meta-gumstix-extras/scripts/lib/image/canned-wks/
+
+By default, it creates a DD-able image (`.direct`) with boot, root and swap partitions. It fits into a 2GB large uSD card.
+You can tweak the size parameter (--size) in the kickstart file to match the size of the image to your micro-SD card.
 
 **7. Flash your image:**
 
-Almost there. Now you just have to populate the card with the image you built. 
-Go to the deploy directory as mentioned in step 5:
+Note that your uSD will have to be at least 2GB large. Pop in your micro SD card to your card writer, and find out the location of
+the block device by running `dmesg`. Now you can run the script as following:
 
-    $ cd build/tmp/deploy/images/{overo|duovero|pepper}   
-    
-Write the bootloader, kernel and the root file system into your card:
+    $ sudo dd if=/var/tmp/wic/build/sdimage-gumstix-201506231742-mmcblk.direct of=/dev/sdb
 
-    $ cp MLO u-boot.img /media/boot
-    $ sudo tar xaf gumstix-console-image.tar.bz2 -C /media/rootfs --strip-components=1
-
-Note that in Gumstix Yocto Project 1.7, you no longer have to copy the kernel image into `/media/boot`.
-A kernel image (zImage) is included in the root file system.
-
-And you should make sure all the files are written:
-
-    $ sync
+If you get an error due to the size of the image being bigger than the uSD card, adjust the size parameter (`--size`) in the kickstart file.
 
 Hooray you are done!
 

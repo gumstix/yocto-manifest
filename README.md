@@ -219,3 +219,7 @@ then re-initialize your repo client
 
     $ repo init -u <file:///path/to/your/git/repository.git>
 
+
+Additional Resources
+--------------------
+Please checkout [Gumstix Yocto Project Wiki](https://github.com/gumstix/yocto-manifest/wiki) for tips on building and using the Gumstix images.

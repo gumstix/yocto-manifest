@@ -7,7 +7,7 @@
   <remote name="yocto" fetch="git://git.yoctoproject.org" />
   <remote name="oe" fetch="git://git.openembedded.org" />
   <remote name="bmwcarit" fetch="git://github.com/bmwcarit" />
-  <remote name="qt5" fetch="git://github.com/meta-qt5/" />
+  <remote name="qt5" fetch="git://github.com/meta-qt5" />
 
   <!-- List all the repositories you want to fetch -->
   <!-- "name": git repository's name on hosting server

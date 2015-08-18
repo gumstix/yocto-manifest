@@ -21,7 +21,7 @@
   <project name="meta-ti" revision="refs/heads/fido"  remote="yocto" path="poky/meta-ti" />
   <project name="meta-ros" revision="refs/heads/master"  remote="bmwcarit" path="poky/meta-ros" />
   <project name="meta-java" revision="refs/heads/master"  remote="yocto" path="poky/meta-java" />
-  <project name="meta-qt5" revision="refs/heads/master"  remote="qt5" path="poky/meta-qt5" />
+  <project name="meta-qt5" revision="refs/heads/fido"  remote="qt5" path="poky/meta-qt5" />
 
 </manifest>
 

@@ -17,6 +17,7 @@
   <project name="meta-openembedded" revision="refs/heads/dizzy"  remote="oe" path="poky/meta-openembedded" />
   <project name="meta-gumstix" revision="refs/heads/dizzy"  remote="gumstix" path="poky/meta-gumstix" />
   <project name="meta-gumstix-extras" revision="refs/heads/dizzy" remote="gumstix" path="poky/meta-gumstix-extras" />
+  <project name="meta-java" revision="refs/heads/master" remote="yocto" path="poky/meta-java" />
   <project name="meta-ti" revision="refs/heads/master"  remote="yocto" path="poky/meta-ti" />
   <project name="meta-ros" revision="refs/heads/master"  remote="bmwcarit" path="poky/meta-ros" />
 

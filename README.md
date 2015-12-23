@@ -72,6 +72,12 @@ To test out the bleeding edge, type:
     $ repo init -u git://github.com/gumstix/Gumstix-YoctoProject-Repo.git -b dev
     $ repo sync
 
+Note that the default settings for bblayers.conf and local.conf may change
+between branches.  If the environment was originally setup with e.g.
+_TEMPLATECONF=meta-gumstix-extras/conf_, check the _*.sample_ files in that
+directory for any corresponding changes needed to the settings in
+ _build/conf/_.
+
 To get back to the known stable version, type:
 
     $ repo init -u git://github.com/gumstix/Gumstix-YoctoProject-Repo.git -b master

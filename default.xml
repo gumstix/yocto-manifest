@@ -14,7 +14,7 @@
        "remote": the remote host from above (if not the default)
        "revision": commitish to checkout (if not the default)
        "path": directory where git repository gets cloned/synced -->
-  <project name="poky" revision="refs/heads/fido" remote="yocto" />
+  <project name="poky" revision="83aa565d93aacae484976562ef1ae8dbbb6b2bc0" remote="yocto" />
   <project name="meta-openembedded" revision="refs/heads/fido"  remote="oe" path="poky/meta-openembedded" />
   <project name="meta-gumstix" revision="refs/heads/fido"  remote="gumstix" path="poky/meta-gumstix" />
   <project name="meta-gumstix-extras" revision="refs/heads/fido" remote="gumstix" path="poky/meta-gumstix-extras" />

@@ -20,7 +20,7 @@
   <project name="meta-gumstix-extras" revision="refs/heads/fido" remote="gumstix" path="poky/meta-gumstix-extras" />
   <project name="meta-ti" revision="refs/heads/fido"  remote="yocto" path="poky/meta-ti" />
   <project name="meta-ros" revision="2fae5e367e0301626491f44dea88e155731d3a19"  remote="bmwcarit" path="poky/meta-ros" />
-  <project name="meta-java" revision="0d7ba0ff39a332b0f93c4958370b2c7db9ea0e30"  remote="yocto" path="poky/meta-java" />
+  <project name="meta-java" revision="66c97ae7461f4c1a13917131787bb76dc34e6b6f"  remote="yocto" path="poky/meta-java" />
   <project name="meta-qt5" revision="refs/heads/fido"  remote="qt5" path="poky/meta-qt5" />
 
 </manifest>

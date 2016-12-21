@@ -16,7 +16,7 @@
   <project name="meta-gumstix-extras" path="poky/meta-gumstix-extras" revision="15cfa9fcff75d3d95f66cfa190e1b604ff5ea4f6" upstream="refs/heads/fido"/>
   <project name="meta-java" path="poky/meta-java" remote="yocto" revision="66c97ae7461f4c1a13917131787bb76dc34e6b6f" upstream="refs/heads/master"/>
   <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe" revision="10d3c8f85280a0bf867a8e4f84bcda81c290d28e" upstream="refs/heads/fido"/>
-  <project name="meta-ros" path="poky/meta-ros" remote="bmwcarit" revision="d465a23c0a96e651419d46b29ab7c0c3663da314" upstream="refs/heads/master"/>
+  <project name="meta-ros" path="poky/meta-ros" remote="bmwcarit" revision="2fae5e367e0301626491f44dea88e155731d3a19" upstream="refs/heads/master"/>
   <project name="meta-ti" path="poky/meta-ti" remote="yocto" revision="03cb3ff15f3b8535ca409ce682f44ec1b81da0c3" upstream="refs/heads/fido"/>
   <project name="poky" remote="yocto" revision="83aa565d93aacae484976562ef1ae8dbbb6b2bc0" upstream="refs/heads/fido"/>
 </manifest>

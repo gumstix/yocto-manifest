@@ -5,7 +5,7 @@
   <remote fetch="git://github.com/gumstix" name="gumstix"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
-  <remote name="qt5" fetch="git://github.com/meta-qt5" />
+  <remote fetch="git://github.com/meta-qt5" name="qt5"/>
 
   <default remote="gumstix" revision="default"/>
   <!-- List all the repositories you want to fetch -->
@@ -17,7 +17,7 @@
   <project name="meta-gumstix-extras" path="poky/meta-gumstix-extras" revision="refs/heads/fido" upstream="refs/heads/fido"/>
   <project name="meta-java" path="poky/meta-java" remote="yocto" revision="33ddb28a6428b02ddcc82d1954ecf27cd426fbb5" upstream="refs/heads/master"/>
   <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe" revision="902964a4da26e46018d2a8d17dcdda1ac4627a39" upstream="refs/heads/fido"/>
-  <project name="meta-ros" path="poky/meta-ros" remote="bmwcarit" revision="2fae5e367e0301626491f44dea88e155731d3a19" upstream="refs/heads/master"/>
+  <project name="meta-ros" path="poky/meta-ros" remote="bmwcarit" revision="8c8349b317992caa9e961d2a843ffa13f4dfe1d1" upstream="refs/heads/master"/>
   <project name="meta-ti" path="poky/meta-ti" remote="yocto" revision="632ea21d490022bbca34ee43bda31bbe5678a779" upstream="refs/heads/fido"/>
   <project name="poky" remote="yocto" revision="c9f0a99050ec0050f0dbcd55d0cd2ab18848113f" upstream="refs/heads/fido"/>
   <project name="meta-qt5" remote="qt5" revision="90919b9d86988e7da01fa2c0a07246b5b5600a5d" path="poky/meta-qt5" />

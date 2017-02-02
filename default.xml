@@ -21,8 +21,9 @@
   <project name="meta-gumstix-extras" revision="refs/heads/next" remote="gumstix" path="poky/meta-gumstix-extras" />
   <project name="meta-ti" revision="refs/heads/krogoth"  remote="yocto" path="poky/meta-ti" />
   <project name="meta-ros" revision="refs/heads/master"  remote="bmwcarit" path="poky/meta-ros" />
-  <project name="meta-java" revision="refs/heads/master"  remote="yocto" path="poky/meta-java" />
+  <project name="meta-java" revision="216481ba09c187d0b0fc8f864944af6ae026ff73"  remote="yocto" path="poky/meta-java" />
   <project name="meta-qt5" revision="refs/heads/krogoth"  remote="qt5" path="poky/meta-qt5" />
+  <project name="meta-qt4" revision="refs/heads/krogoth"  remote="yocto" path="poky/meta-qt4" />
 
 
 </manifest>

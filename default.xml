@@ -14,14 +14,16 @@
        "remote": the remote host from above (if not the default)
        "revision": commitish to checkout (if not the default)
        "path": directory where git repository gets cloned/synced -->
-  <project name="poky" revision="c9f0a99050ec0050f0dbcd55d0cd2ab18848113f" remote="yocto" />
-  <project name="meta-openembedded" revision="902964a4da26e46018d2a8d17dcdda1ac4627a39"  remote="oe" path="poky/meta-openembedded" />
-  <project name="meta-gumstix" revision="refs/heads/fido"  remote="gumstix" path="poky/meta-gumstix" />
-  <project name="meta-gumstix-extras" revision="refs/heads/fido" remote="gumstix" path="poky/meta-gumstix-extras" />
-  <project name="meta-ti" revision="632ea21d490022bbca34ee43bda31bbe5678a779"  remote="yocto" path="poky/meta-ti" />
-  <project name="meta-ros" revision="2fae5e367e0301626491f44dea88e155731d3a19"  remote="bmwcarit" path="poky/meta-ros" />
-  <project name="meta-java" revision="33ddb28a6428b02ddcc82d1954ecf27cd426fbb5"  remote="yocto" path="poky/meta-java" />
-  <project name="meta-qt5" revision="90919b9d86988e7da01fa2c0a07246b5b5600a5d"  remote="qt5" path="poky/meta-qt5" />
+  
+  <project name="poky" revision="refs/heads/krogoth" remote="yocto" />
+  <project name="meta-openembedded" revision="refs/heads/krogoth"  remote="oe" path="poky/meta-openembedded" />
+  <project name="meta-gumstix" revision="refs/heads/next"  remote="gumstix" path="poky/meta-gumstix" />
+  <project name="meta-gumstix-extras" revision="refs/heads/next" remote="gumstix" path="poky/meta-gumstix-extras" />
+  <project name="meta-ti" revision="refs/heads/krogoth"  remote="yocto" path="poky/meta-ti" />
+  <project name="meta-ros" revision="refs/heads/master"  remote="bmwcarit" path="poky/meta-ros" />
+  <project name="meta-java" revision="216481ba09c187d0b0fc8f864944af6ae026ff73"  remote="yocto" path="poky/meta-java" />
+  <project name="meta-qt5" revision="refs/heads/krogoth"  remote="qt5" path="poky/meta-qt5" />
+  <project name="meta-qt4" revision="refs/heads/krogoth"  remote="yocto" path="poky/meta-qt4" />
 
 </manifest>
 

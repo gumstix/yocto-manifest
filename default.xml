@@ -8,13 +8,14 @@
   <remote name="oe" fetch="git://git.openembedded.org" />
   <remote name="bmwcarit" fetch="git://github.com/bmwcarit" />
   <remote name="qt5" fetch="git://github.com/meta-qt5" />
-
+  <remote name="OSS" fetch="git://github.com/OSSystems" />
   <!-- List all the repositories you want to fetch -->
   <!-- "name": git repository's name on hosting server
        "remote": the remote host from above (if not the default)
        "revision": commitish to checkout (if not the default)
        "path": directory where git repository gets cloned/synced -->
   
+  <project name="meta-browser" remote="OSS" revision="393d2aa15da21ffa532c3cd77d8cb91de997cd31" path="poky/meta-browser"/>
   <project name="poky" revision="refs/heads/krogoth" remote="yocto" />
   <project name="meta-openembedded" revision="refs/heads/krogoth"  remote="oe" path="poky/meta-openembedded" />
   <project name="meta-gumstix" revision="refs/heads/next"  remote="gumstix" path="poky/meta-gumstix" />

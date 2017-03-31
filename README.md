@@ -145,12 +145,23 @@ You can tweak the size parameter (--size) in the kickstart file to match the siz
 
 **7. Flash your image:**
 
-Note that your uSD will have to be at least 2GB large. Pop in your micro SD card to your card writer, and find out the location of
-the block device by running `dmesg`. Now you can run the script as following:
+Note that your uSD will have to be at least 2GB large. Pop in your micro SD card to your card writer, and find out the location of the block device by running dmesg.
 
-    $ sudo dd if=/var/tmp/wic/build/sdimage-gumstix-201506231742-mmcblk.direct of=/dev/sdb
+Be sure to install bmap-tools:
 
-If you get an error due to the size of the image being bigger than the uSD card, adjust the size parameter (`--size`) in the kickstart file.
+    $ sudo apt-get install bmap-tools
+
+Create a bmap file:
+
+    $ bmaptool create /var/tmp/wic/build/sdimage-gumstix-201506231742-mmcblk.direct > image.bmap
+    
+Flash uSD:
+
+    $ sudo bmaptool copy --bmap image.bmap /var/tmp/wic/build/sdimage-gumstix-201506231742-mmcblk.direct /dev/sdb
+    
+Note :
+
+The "201506231742" will be different. It depends on when you create it.
 
 Hooray you are done!
 

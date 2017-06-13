@@ -18,8 +18,8 @@
   <project name="meta-browser" remote="OSS" revision="393d2aa15da21ffa532c3cd77d8cb91de997cd31" path="poky/meta-browser"/>
   <project name="poky" revision="refs/heads/krogoth" remote="yocto" />
   <project name="meta-openembedded" revision="refs/heads/krogoth"  remote="oe" path="poky/meta-openembedded" />
-  <project name="meta-gumstix" revision="refs/heads/next"  remote="gumstix" path="poky/meta-gumstix" />
-  <project name="meta-gumstix-extras" revision="refs/heads/next" remote="gumstix" path="poky/meta-gumstix-extras" />
+  <project name="meta-gumstix" revision="refs/heads/krogoth"  remote="gumstix" path="poky/meta-gumstix" />
+  <project name="meta-gumstix-extras" revision="refs/heads/krogoth" remote="gumstix" path="poky/meta-gumstix-extras" />
   <project name="meta-ti" revision="refs/heads/krogoth"  remote="yocto" path="poky/meta-ti" />
   <project name="meta-ros" revision="eb4f9edf2af38a854a2a8d28e45ea02f6bdb7f12"  remote="bmwcarit" path="poky/meta-ros" />
   <project name="meta-java" revision="33ddb28a6428b02ddcc82d1954ecf27cd426fbb5"  remote="yocto" path="poky/meta-java" />

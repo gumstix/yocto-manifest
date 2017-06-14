@@ -15,16 +15,16 @@
        "revision": commitish to checkout (if not the default)
        "path": directory where git repository gets cloned/synced -->
   
-  <project name="meta-browser" remote="OSS" revision="393d2aa15da21ffa532c3cd77d8cb91de997cd31" path="poky/meta-browser"/>
-  <project name="poky" revision="refs/heads/krogoth" remote="yocto" />
-  <project name="meta-openembedded" revision="refs/heads/krogoth"  remote="oe" path="poky/meta-openembedded" />
-  <project name="meta-gumstix" revision="refs/heads/next"  remote="gumstix" path="poky/meta-gumstix" />
-  <project name="meta-gumstix-extras" revision="refs/heads/next" remote="gumstix" path="poky/meta-gumstix-extras" />
-  <project name="meta-ti" revision="refs/heads/krogoth"  remote="yocto" path="poky/meta-ti" />
+  <project name="meta-browser" remote="OSS" revision="refs/heads/morty" path="poky/meta-browser"/>
+  <project name="poky" revision="refs/heads/morty" remote="yocto" />
+  <project name="meta-openembedded" revision="refs/heads/morty"  remote="oe" path="poky/meta-openembedded" />
+  <project name="meta-gumstix" revision="refs/heads/morty"  remote="gumstix" path="poky/meta-gumstix" />
+  <project name="meta-gumstix-extras" revision="refs/heads/morty" remote="gumstix" path="poky/meta-gumstix-extras" />
+  <project name="meta-ti" revision="refs/heads/morty"  remote="yocto" path="poky/meta-ti" />
   <project name="meta-ros" revision="refs/heads/master"  remote="bmwcarit" path="poky/meta-ros" />
-  <project name="meta-java" revision="216481ba09c187d0b0fc8f864944af6ae026ff73"  remote="yocto" path="poky/meta-java" />
-  <project name="meta-qt5" revision="refs/heads/krogoth"  remote="qt5" path="poky/meta-qt5" />
-  <project name="meta-qt4" revision="refs/heads/krogoth"  remote="yocto" path="poky/meta-qt4" />
+  <project name="meta-java" revision="refs/heads/morty"  remote="yocto" path="poky/meta-java" />
+  <project name="meta-qt5" revision="refs/heads/morty"  remote="qt5" path="poky/meta-qt5" />
+  <project name="meta-raspberrypi" revision="refs/heads/morty"  remote="yocto" path="poky/meta-raspberrypi" />
 
 </manifest>
 

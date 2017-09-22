@@ -60,16 +60,16 @@ stored but you should not need to touch this directory.
 ***
 **Note:**
 You can use the **-b** switch to specify the branch of the repository
-to use.  We develop on the guaranteed-to-break **dev** branch.  Most people should use
-the **master** branch, which should at least compile.
+to use.  We develop on the guaranteed-to-break **morty** branch.  Most people should use
+the **fido** branch, which should at least compile.
 
 The **-m** switch selects the manifest file (default is *default.xml*).
-Our default.xml on **master** is designed to be stable as it *pins*
+Our default.xml on **fido** is designed to be stable as it *pins*
 particular commits.
 
 To test out the bleeding edge, type:
 
-    $ repo init -u git://github.com/gumstix/yocto-manifest.git -b dev
+    $ repo init -u git://github.com/gumstix/yocto-manifest.git -b morty
     $ repo sync
 
 Note that the default settings for bblayers.conf and local.conf may change
@@ -80,7 +80,7 @@ directory for any corresponding changes needed to the settings in
 
 To get back to the known stable version, type:
 
-    $ repo init -u git://github.com/gumstix/yocto-manifest.git -b master
+    $ repo init -u git://github.com/gumstix/yocto-manifest.git -b fido
     $ repo sync
 
 Also you can get a specific version of Yocto Project:

@@ -9,6 +9,7 @@
   <remote name="bmwcarit" fetch="git://github.com/bmwcarit" />
   <remote name="qt5" fetch="git://github.com/meta-qt5" />
   <remote name="OSS" fetch="git://github.com/OSSystems" />
+  <remote name="golang" fetch="git://github.com/mem" />
   <!-- List all the repositories you want to fetch -->
   <!-- "name": git repository's name on hosting server
        "remote": the remote host from above (if not the default)
@@ -25,6 +26,7 @@
   <project name="meta-java" revision="refs/heads/morty"  remote="yocto" path="poky/meta-java" />
   <project name="meta-qt5" revision="refs/heads/morty"  remote="qt5" path="poky/meta-qt5" />
   <project name="meta-raspberrypi" revision="refs/heads/morty"  remote="yocto" path="poky/meta-raspberrypi" />
+  <project name="oe-meta-go" revision="refs/heads/master"  remote="golang" path="poky/oe-meta-go" />
 
 </manifest>
 

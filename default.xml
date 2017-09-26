@@ -9,6 +9,8 @@
   <remote name="bmwcarit" fetch="git://github.com/bmwcarit" />
   <remote name="qt5" fetch="git://github.com/meta-qt5" />
   <remote name="OSS" fetch="git://github.com/OSSystems" />
+  <remote name="freescale" fetch="git://github.com/Freescale" />
+  <remote name="fsl-release" fetch="git://git.freescale.com/imx" />
   <!-- List all the repositories you want to fetch -->
   <!-- "name": git repository's name on hosting server
        "remote": the remote host from above (if not the default)
@@ -25,6 +27,11 @@
   <project name="meta-java" revision="33ddb28a6428b02ddcc82d1954ecf27cd426fbb5"  remote="yocto" path="poky/meta-java" />
   <project name="meta-qt5" revision="refs/heads/krogoth"  remote="qt5" path="poky/meta-qt5" />
   <project name="meta-qt4" revision="refs/heads/krogoth"  remote="yocto" path="poky/meta-qt4" />
+  <project name="meta-freescale-3rdparty" revision="refs/heads/krogoth" remote="freescale" path="poky/meta-fsl-arm-extra" />
+  <project name="meta-fsl-demos" revision="refs/heads/krogoth" remote="freescale" path="poky/meta-fsl-demos"/>
+  <project name="meta-fsl-arm" revision="refs/heads/krogoth" remote="yocto" path="poky/meta-fsl-arm"/>
+  <project name="meta-fsl-bsp-release" revision="refs/heads/krogoth_4.1.15-2.0.1" remote="fsl-release" path="poky/meta-fsl-bsp-release"/>
+  <project name="meta-nxp-imx-scm" revision="imx-4.1.15-2.0.0_ga" remote="fsl-release"  path="poky/meta-nxp-imx-scm"/>
 
 </manifest>
 

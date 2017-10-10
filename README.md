@@ -89,7 +89,7 @@ For example,
 
     $ repo init -u git://github.com/gumstix/yocto-manifest.git -b refs/tags/danny
     
-To learn more about repo, look at http://source.android.com/source/version-control.html 
+To learn more about repo, look at [Repo Command Reference](https://source.android.com/source/using-repo "Using repo")
 ***
 
 **3.  Fetch all the repositories:**
@@ -123,10 +123,10 @@ If everything goes well, you should have a compressed root filesystem
 tarball as well as kernel and bootloader binaries available in your
 **tmp/deploy/images/{ overo | duovero | pepper }** directory.  If you run into problems, the most likely
 candidate is missing software packages.  Check out
-http://www.yoctoproject.org/docs/current/yocto-project-qs/yocto-project-qs.html#resources
+[The Build Host Packages](http://www.yoctoproject.org/docs/current/yocto-project-qs/yocto-project-qs.html#resources "Yocto quick start guide")
 for the list of required packages for operating system. Also, take
 a look to be sure your operating system is supported:
-https://wiki.yoctoproject.org/wiki/Distribution_Support
+[Distribution Supported List](https://wiki.yoctoproject.org/wiki/Distribution_Support "Yocto wiki")
 
 
 **6. Create a bootable micro SD card:**
@@ -207,7 +207,7 @@ increment the recipe version (the PR variable); cleaning is not necessary.
 
 To understand better how bitbake processes recipes, look at the excellent 
 documentation:
-http://www.yoctoproject.org/docs/current/ref-manual/ref-manual.html.
+[Yocto Project Reference Manual](http://www.yoctoproject.org/docs/current/poky-ref-manual/poky-ref-manual.html)
 ***
 
 To make sense of the differences between these cleaning methods, it is useful to

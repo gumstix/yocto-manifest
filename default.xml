@@ -12,6 +12,7 @@
   <remote name="golang" fetch="git://github.com/mem" />
   <remote name="imx6" fetch="git://git.toradex.com" />
   <remote name="freescale" fetch="git://github.com/Freescale" />
+  <remote name="ndechesne" fetch="git://github.com/ndechesne" />
   <!-- List all the repositories you want to fetch -->
   <!-- "name": git repository's name on hosting server
        "remote": the remote host from above (if not the default)
@@ -33,6 +34,7 @@
   <project name="meta-toradex-bsp-common.git" revision="refs/heads/morty" remote="imx6" path="poky/meta-toradex-bsp-common" />
   <project name="meta-freescale" revision="refs/heads/morty" remote="yocto" path="poky/meta-freescale" />
   <project name="meta-freescale-3rdparty" revision="refs/heads/morty" remote="freescale" path="poky/meta-fsl-arm-extra" />
+  <project name="meta-qcom" revision="refs/heads/morty" remote="ndechesne" path="poky/meta-qcom" />
 
 </manifest>
 

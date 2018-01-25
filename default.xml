@@ -24,7 +24,7 @@
   <project name="meta-gumstix-extras" revision="refs/heads/krogoth" remote="gumstix" path="poky/meta-gumstix-extras" />
   <project name="meta-ti" revision="refs/heads/krogoth"  remote="yocto" path="poky/meta-ti" />
   <project name="meta-ros" revision="eb4f9edf2af38a854a2a8d28e45ea02f6bdb7f12"  remote="bmwcarit" path="poky/meta-ros" />
-  <project name="meta-java" revision="33ddb28a6428b02ddcc82d1954ecf27cd426fbb5"  remote="yocto" path="poky/meta-java" />
+  <project name="meta-java" revision="refs/heads/krogoth"  remote="yocto" path="poky/meta-java" />
   <project name="meta-qt5" revision="refs/heads/krogoth"  remote="qt5" path="poky/meta-qt5" />
   <project name="meta-qt4" revision="refs/heads/krogoth"  remote="yocto" path="poky/meta-qt4" />
   <project name="meta-freescale-3rdparty" revision="refs/heads/krogoth" remote="freescale" path="poky/meta-fsl-arm-extra" />

@@ -3,12 +3,13 @@
   <default remote="gumstix" revision="default"/>
 
   <!-- You can have as many remote repositories as you like -->
-  <remote name="gumstix" fetch="git://github.com/gumstix" />
+
+  <remote name="OSS" fetch="git://github.com/OSSystems" />
   <remote name="yocto" fetch="git://git.yoctoproject.org" />
   <remote name="oe" fetch="git://git.openembedded.org" />
+  <remote name="gumstix" fetch="git://github.com/gumstix" />
   <remote name="bmwcarit" fetch="git://github.com/bmwcarit" />
   <remote name="qt5" fetch="git://github.com/meta-qt5" />
-  <remote name="OSS" fetch="git://github.com/OSSystems" />
   <remote name="golang" fetch="git://github.com/mem" />
   <remote name="imx6" fetch="git://git.toradex.com" />
   <remote name="freescale" fetch="git://github.com/Freescale" />
@@ -18,23 +19,32 @@
        "remote": the remote host from above (if not the default)
        "revision": commitish to checkout (if not the default)
        "path": directory where git repository gets cloned/synced -->
-  
-  <project name="meta-browser" remote="OSS" revision="refs/heads/morty" path="poky/meta-browser"/>
-  <project name="poky" revision="refs/heads/morty" remote="yocto" />
-  <project name="meta-openembedded" revision="refs/heads/morty"  remote="oe" path="poky/meta-openembedded" />
-  <project name="meta-gumstix" revision="refs/heads/morty"  remote="gumstix" path="poky/meta-gumstix" />
-  <project name="meta-gumstix-extras" revision="refs/heads/morty" remote="gumstix" path="poky/meta-gumstix-extras" />
-  <project name="meta-ti" revision="refs/heads/morty"  remote="yocto" path="poky/meta-ti" />
+
+  <project name="meta-browser" remote="OSS" revision="refs/heads/master" path="poky/meta-browser"/>
+
+  <project name="poky" revision="refs/heads/rocko" remote="yocto" />
+  <project name="meta-ti" revision="refs/heads/rocko"  remote="yocto" path="poky/meta-ti" />
+  <project name="meta-java" revision="refs/heads/master"  remote="yocto" path="poky/meta-java" />
+  <project name="meta-raspberrypi" revision="refs/heads/rocko"  remote="yocto" path="poky/meta-raspberrypi" />
+  <project name="meta-freescale" revision="refs/heads/rocko" remote="yocto" path="poky/meta-freescale" />
+
+  <project name="meta-openembedded" revision="refs/heads/rocko"  remote="oe" path="poky/meta-openembedded" />
+
+  <project name="meta-gumstix" revision="refs/heads/rocko"  remote="gumstix" path="poky/meta-gumstix" />
+  <project name="meta-gumstix-extras" revision="refs/heads/rocko" remote="gumstix" path="poky/meta-gumstix-extras" />
+
   <project name="meta-ros" revision="6d08433f9d9154480b664014a2e852a2cc806b99"  remote="bmwcarit" path="poky/meta-ros" />
-  <project name="meta-java" revision="refs/heads/morty"  remote="yocto" path="poky/meta-java" />
-  <project name="meta-qt5" revision="refs/heads/morty"  remote="qt5" path="poky/meta-qt5" />
-  <project name="meta-raspberrypi" revision="refs/heads/morty"  remote="yocto" path="poky/meta-raspberrypi" />
+
+  <project name="meta-qt5" revision="refs/heads/rocko"  remote="qt5" path="poky/meta-qt5" />
+
   <project name="oe-meta-go" revision="refs/heads/master"  remote="golang" path="poky/oe-meta-go" />
-  <project name="meta-toradex-nxp.git" revision="refs/heads/morty-next" remote="imx6" path="poky/meta-toradex-nxp" />
-  <project name="meta-toradex-bsp-common.git" revision="refs/heads/morty" remote="imx6" path="poky/meta-toradex-bsp-common" />
-  <project name="meta-freescale" revision="refs/heads/morty" remote="yocto" path="poky/meta-freescale" />
-  <project name="meta-freescale-3rdparty" revision="refs/heads/morty" remote="freescale" path="poky/meta-fsl-arm-extra" />
-  <project name="meta-qcom" revision="refs/heads/morty" remote="ndechesne" path="poky/meta-qcom" />
+
+  <project name="meta-toradex-nxp.git" revision="refs/heads/rocko" remote="imx6" path="poky/meta-toradex-nxp" />
+  <project name="meta-toradex-bsp-common.git" revision="refs/heads/rocko" remote="imx6" path="poky/meta-toradex-bsp-common" />
+
+  <project name="meta-freescale-3rdparty" revision="refs/heads/rocko" remote="freescale" path="poky/meta-fsl-arm-extra" />
+
+  <project name="meta-qcom" revision="refs/heads/rocko" remote="ndechesne" path="poky/meta-qcom" />
 
 </manifest>
 

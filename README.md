@@ -50,7 +50,7 @@ Create an empty directory to hold your working files:
 
 Tell Repo where to find the manifest:
 
-    $ repo init -u git://github.com/gumstix/yocto-manifest.git 
+    $ repo init -u git://github.com/gumstix/yocto-manifest.git -b <branch>
 
 A successful initialization will end with a message stating that Repo is
 initialized in your working directory. Your directory should now

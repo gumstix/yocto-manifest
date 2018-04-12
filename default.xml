@@ -24,7 +24,7 @@
 
   <project name="poky" revision="refs/heads/rocko" remote="yocto" />
   <project name="meta-ti" revision="refs/heads/rocko"  remote="yocto" path="poky/meta-ti" />
-  <project name="meta-java" revision="refs/heads/master"  remote="yocto" path="poky/meta-java" />
+  <project name="meta-java" revision="refs/heads/rocko"  remote="yocto" path="poky/meta-java" />
   <project name="meta-raspberrypi" revision="refs/heads/rocko"  remote="yocto" path="poky/meta-raspberrypi" />
   <project name="meta-freescale" revision="refs/heads/rocko" remote="yocto" path="poky/meta-freescale" />
 

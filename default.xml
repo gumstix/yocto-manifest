@@ -33,6 +33,7 @@
   <project name="meta-gumstix" revision="refs/heads/rocko"  remote="gumstix" path="poky/meta-gumstix" />
   <project name="meta-gumstix-extras" revision="refs/heads/rocko" remote="gumstix" path="poky/meta-gumstix-extras" />
 
+<!-- Master branch of meta-ros does not compatible with Rocko -->
   <project name="meta-ros" revision="6d08433f9d9154480b664014a2e852a2cc806b99"  remote="bmwcarit" path="poky/meta-ros" />
 
   <project name="meta-qt5" revision="refs/heads/rocko"  remote="qt5" path="poky/meta-qt5" />

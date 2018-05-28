@@ -11,7 +11,7 @@
   <remote name="bmwcarit" fetch="git://github.com/bmwcarit" />
   <remote name="qt5" fetch="git://github.com/meta-qt5" />
   <remote name="golang" fetch="git://github.com/mem" />
-  <remote name="imx6" fetch="git://git.toradex.com" />
+  <remote name="toradex" fetch="http://git.toradex.com" />
   <remote name="freescale" fetch="git://github.com/Freescale" />
   <remote name="ndechesne" fetch="git://github.com/ndechesne" />
   <!-- List all the repositories you want to fetch -->
@@ -40,8 +40,8 @@
 
   <project name="oe-meta-go" revision="refs/heads/master"  remote="golang" path="poky/oe-meta-go" />
 
-  <project name="meta-toradex-nxp.git" revision="refs/heads/rocko" remote="imx6" path="poky/meta-toradex-nxp" />
-  <project name="meta-toradex-bsp-common.git" revision="refs/heads/rocko" remote="imx6" path="poky/meta-toradex-bsp-common" />
+  <project name="meta-toradex-nxp.git" revision="refs/heads/rocko" remote="toradex" path="poky/meta-toradex-nxp" />
+  <project name="meta-toradex-bsp-common.git" revision="refs/heads/rocko" remote="toradex" path="poky/meta-toradex-bsp-common" />
 
   <project name="meta-freescale-3rdparty" revision="refs/heads/rocko" remote="freescale" path="poky/meta-fsl-arm-extra" />
 

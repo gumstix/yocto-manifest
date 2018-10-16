@@ -25,7 +25,7 @@
   <project name="meta-gumstix" revision="refs/heads/morty"  remote="gumstix" path="poky/meta-gumstix" />
   <project name="meta-gumstix-extras" revision="refs/heads/morty" remote="gumstix" path="poky/meta-gumstix-extras" />
   <project name="meta-ti" revision="refs/heads/morty"  remote="yocto" path="poky/meta-ti" />
-  <project name="meta-ros" revision="refs/heads/master"  remote="bmwcarit" path="poky/meta-ros" />
+  <project name="meta-ros" revision="ecb50b588f9b242cebb1f8b380a38bd92b196efe"  remote="bmwcarit" path="poky/meta-ros" />
   <project name="meta-java" revision="refs/heads/morty"  remote="yocto" path="poky/meta-java" />
   <project name="meta-qt5" revision="refs/heads/morty"  remote="qt5" path="poky/meta-qt5" />
   <project name="meta-raspberrypi" revision="refs/heads/morty"  remote="yocto" path="poky/meta-raspberrypi" />

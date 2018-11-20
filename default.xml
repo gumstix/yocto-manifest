@@ -20,7 +20,7 @@
        "revision": commitish to checkout (if not the default)
        "path": directory where git repository gets cloned/synced -->
 
-  <project name="meta-browser" remote="OSS" revision="refs/heads/master" path="poky/meta-browser"/>
+  <project name="meta-browser" remote="OSS" revision="b5fa3f598236a58da6217852340f5f8dd01c9a71" path="poky/meta-browser"/>
 
   <project name="poky" revision="refs/heads/rocko" remote="yocto" />
   <project name="meta-ti" revision="refs/heads/rocko"  remote="yocto" path="poky/meta-ti" />

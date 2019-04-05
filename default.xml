@@ -20,32 +20,32 @@
        "revision": commitish to checkout (if not the default)
        "path": directory where git repository gets cloned/synced -->
 
-  <project name="meta-browser" remote="OSS" revision="b5fa3f598236a58da6217852340f5f8dd01c9a71" path="poky/meta-browser"/>
+  <project name="meta-browser" remote="OSS" revision="refs/heads/master" path="poky/meta-browser"/>
 
-  <project name="poky" revision="refs/heads/rocko" remote="yocto" />
-  <project name="meta-ti" revision="refs/heads/rocko"  remote="yocto" path="poky/meta-ti" />
-  <project name="meta-java" revision="refs/heads/rocko"  remote="yocto" path="poky/meta-java" />
-  <project name="meta-raspberrypi" revision="refs/heads/rocko"  remote="yocto" path="poky/meta-raspberrypi" />
-  <project name="meta-freescale" revision="refs/heads/rocko" remote="yocto" path="poky/meta-freescale" />
+  <project name="poky" revision="refs/heads/thud" remote="yocto" />
+  <project name="meta-ti" revision="refs/heads/thud"  remote="yocto" path="poky/meta-ti" />
+  <project name="meta-java" revision="refs/heads/thud"  remote="yocto" path="poky/meta-java" />
+  <project name="meta-raspberrypi" revision="refs/heads/thud"  remote="yocto" path="poky/meta-raspberrypi" />
+  <project name="meta-freescale" revision="refs/heads/thud" remote="yocto" path="poky/meta-freescale" />
 
-  <project name="meta-openembedded" revision="refs/heads/rocko"  remote="oe" path="poky/meta-openembedded" />
+  <project name="meta-openembedded" revision="refs/heads/thud"  remote="oe" path="poky/meta-openembedded" />
 
-  <project name="meta-gumstix" revision="refs/heads/rocko"  remote="gumstix" path="poky/meta-gumstix" />
-  <project name="meta-gumstix-extras" revision="refs/heads/rocko" remote="gumstix" path="poky/meta-gumstix-extras" />
+  <project name="meta-gumstix" revision="refs/heads/thud"  remote="gumstix" path="poky/meta-gumstix" />
+  <project name="meta-gumstix-extras" revision="refs/heads/thud" remote="gumstix" path="poky/meta-gumstix-extras" />
 
-<!-- Master branch of meta-ros does not compatible with Rocko -->
-  <project name="meta-ros" revision="6d08433f9d9154480b664014a2e852a2cc806b99"  remote="bmwcarit" path="poky/meta-ros" />
+  <project name="meta-ros" revision="refs/heads/master"  remote="bmwcarit" path="poky/meta-ros" />
 
-  <project name="meta-qt5" revision="refs/heads/rocko"  remote="qt5" path="poky/meta-qt5" />
+  <project name="meta-qt5" revision="refs/heads/thud"  remote="qt5" path="poky/meta-qt5" />
 
   <project name="oe-meta-go" revision="refs/heads/master"  remote="golang" path="poky/oe-meta-go" />
 
-  <project name="meta-toradex-nxp.git" revision="refs/heads/rocko" remote="toradex" path="poky/meta-toradex-nxp" />
-  <project name="meta-toradex-bsp-common.git" revision="refs/heads/rocko" remote="toradex" path="poky/meta-toradex-bsp-common" />
+  <project name="meta-toradex-nxp.git" revision="refs/heads/thud-next" remote="toradex" path="poky/meta-toradex-nxp" />
+  <project name="meta-toradex-bsp-common.git" revision="refs/heads/thud-next" remote="toradex" path="poky/meta-toradex-bsp-common" />
 
-  <project name="meta-freescale-3rdparty" revision="refs/heads/rocko" remote="freescale" path="poky/meta-fsl-arm-extra" />
+  <project name="meta-freescale-3rdparty" revision="refs/heads/thud" remote="freescale" path="poky/meta-fsl-arm-extra" />
 
-  <project name="meta-qcom" revision="refs/heads/rocko" remote="ndechesne" path="poky/meta-qcom" />
+  <project name="meta-qcom" revision="refs/heads/thud" remote="ndechesne" path="poky/meta-qcom" />
 
 </manifest>
+
 

@@ -61,7 +61,8 @@ stored but you should not need to touch this directory.
 **Note:**
 You can use the **-b** switch to specify the branch of the repository
 to use.  We develop on the guaranteed-to-break **rocko** branch.  Most people should use
-the **morty** branch, which should at least compile.
+the **morty** branch, which should at least compile. Currently the very guaranteed-to-break
+**thud** branch is only tested with the Raspberry Pi CM3+.
 
 The **-m** switch selects the manifest file (default is *default.xml*).
 Our default.xml on **morty** is designed to be stable as it *pins*
@@ -69,7 +70,7 @@ particular commits.
 
 To test out the bleeding edge, type:
 
-    $ repo init -u git://github.com/gumstix/yocto-manifest.git -b rocko
+    $ repo init -u git://github.com/gumstix/yocto-manifest.git -b thud
     $ repo sync
 
 Note that the default settings for bblayers.conf and local.conf may change

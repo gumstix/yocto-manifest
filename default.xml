@@ -24,6 +24,7 @@
   <project name="meta-gumstix-extras" revision="refs/heads/warrior" remote="gumstix" path="poky/meta-gumstix-extras" />
   <project name="meta-qt5" revision="refs/heads/warrior"  remote="qt5" path="poky/meta-qt5" />
   <project name="meta-tegra" revision="refs/heads/warrior-l4t-r32.2" remote="tegra" path="poky/meta-tegra" />
+  <project name="meta-java" revision="refs/heads/warrior"  remote="yocto" path="poky/meta-java" />
 
 </manifest>
 

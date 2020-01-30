@@ -9,6 +9,8 @@
   <remote name="gumstix" fetch="git://github.com/gumstix" />
   <remote name="qt5" fetch="git://github.com/meta-qt5" />
   <remote name="tegra" fetch="git://github.com/madisongh" />
+  <remote name="ossytems" fetch="git://github.com/OSSystems" />
+  <remote name="clang" fetch="git://github.com/kraj" />
 
   <!-- List all the repositories you want to fetch -->
   <!-- "name": git repository's name on hosting server
@@ -26,6 +28,8 @@
   <project name="meta-tegra" revision="refs/heads/warrior-l4t-r32.2" remote="tegra" path="poky/meta-tegra" />
   <project name="meta-java" revision="refs/heads/warrior"  remote="yocto" path="poky/meta-java" />
   <project name="meta-tensorflow" revision="refs/heads/master"  remote="yocto" path="poky/meta-tensorflow" />
+  <project name="meta-browser" revision="refs/heads/master"  remote="ossytems" path="poky/meta-browser" />
+  <project name="meta-clang" revision="refs/heads/warrior"  remote="clang" path="poky/meta-clang" />
 
 </manifest>
 

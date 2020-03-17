@@ -60,7 +60,7 @@ stored but you should not need to touch this directory.
 ***
 **Note:**
 You can use the **-b** switch to specify the branch of the repository
-to use.  We develop on the guaranteed-to-break **warrior** branch.  Most people should use
+to use.  We develop on the guaranteed-to-break **zeus** branch.  Most people should use
 the **morty** branch, which should at least compile.
 
 The **-m** switch selects the manifest file (default is *default.xml*).
@@ -69,7 +69,7 @@ particular commits.
 
 To test out the bleeding edge, type:
 
-    $ repo init -u git://github.com/gumstix/yocto-manifest.git -b warrior 
+    $ repo init -u git://github.com/gumstix/yocto-manifest.git -b zeus
     $ repo sync
 
 Note that the default settings for bblayers.conf and local.conf may change

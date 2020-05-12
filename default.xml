@@ -19,7 +19,7 @@
        "path": directory where git repository gets cloned/synced -->
 
   <project name="poky" revision="refs/heads/warrior" remote="yocto" />
-  <project name="meta-ti" revision="refs/heads/master"  remote="yocto" path="poky/meta-ti" />
+  <project name="meta-ti" revision="refs/heads/zeus"  remote="yocto" path="poky/meta-ti" />
   <project name="meta-raspberrypi" revision="refs/heads/warrior"  remote="yocto" path="poky/meta-raspberrypi" />
   <project name="meta-openembedded" revision="refs/heads/warrior"  remote="oe" path="poky/meta-openembedded" />
   <project name="meta-gumstix" revision="refs/heads/warrior"  remote="gumstix" path="poky/meta-gumstix" />

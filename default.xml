@@ -28,7 +28,7 @@
   <project name="meta-tegra" revision="refs/heads/warrior-l4t-r32.2" remote="tegra" path="poky/meta-tegra" />
   <project name="meta-java" revision="refs/heads/warrior"  remote="yocto" path="poky/meta-java" />
   <project name="meta-tensorflow" revision="refs/heads/master"  remote="yocto" path="poky/meta-tensorflow" />
-  <project name="meta-browser" revision="refs/heads/master"  remote="ossytems" path="poky/meta-browser" />
+  <project name="meta-browser" revision="refs/heads/warrior"  remote="ossytems" path="poky/meta-browser" />
   <project name="meta-clang" revision="refs/heads/warrior"  remote="clang" path="poky/meta-clang" />
   <project name="meta-python2" revision="refs/heads/warrior"  remote="oe" path="poky/meta-python2" />
 

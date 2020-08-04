@@ -8,6 +8,7 @@
   <remote name="oe" fetch="git://git.openembedded.org" />
   <remote name="gumstix" fetch="git://github.com/gumstix" />
   <remote name="qt5" fetch="git://github.com/meta-qt5" />
+  <remote name="qt5-extra" fetch="git://github.com/schnitzeltony" />
   <remote name="tegra" fetch="git://github.com/madisongh" />
   <remote name="ossytems" fetch="git://github.com/OSSystems" />
   <remote name="clang" fetch="git://github.com/kraj" />
@@ -31,6 +32,7 @@
   <project name="meta-clang" revision="refs/heads/dunfell"  remote="clang" path="poky/meta-clang" />
   <project name="meta-python2" revision="refs/heads/dunfell"  remote="oe" path="poky/meta-python2" />
   <project name="meta-arm" revision="refs/heads/dunfell"  remote="yocto" path="poky/meta-arm" />
+  <project name="meta-qt5-extra" revision="refs/heads/master"  remote="qt5-extra" path="poky/meta-qt5-extra" />
 
 </manifest>
 

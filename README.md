@@ -69,7 +69,7 @@ particular commits.
 
 To test out the bleeding edge, type:
 
-    $ repo init -u git://github.com/gumstix/yocto-manifest.git -b warrior 
+    $ repo init -u git://github.com/gumstix/yocto-manifest.git -b dunfell 
     $ repo sync
 
 Note that the default settings for bblayers.conf and local.conf may change
@@ -80,7 +80,7 @@ directory for any corresponding changes needed to the settings in
 
 To get back to the known stable version, type:
 
-    $ repo init -u git://github.com/gumstix/yocto-manifest.git -b morty
+    $ repo init -u git://github.com/gumstix/yocto-manifest.git -b warrior
     $ repo sync
 
 Also you can get a specific version of Yocto Project:

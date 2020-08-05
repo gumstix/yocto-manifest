@@ -135,8 +135,23 @@ You are one step closer to booting your Gumstix with the new image you built!
 Usually you have to create two partitions in your uSD: `boot` and `root`, and copy the bootloader and the root file system.
 Optionally you may want to create a swap partition.
 
-You can follow the instructions given here:
+If you are building for a Raspberry Pi, follow the instuctions below. Otherwise, you can follow the instructions given here:
     [Create Bootable MicroSD Card](https://www.gumstix.com/support/getting-started/create-bootable-microsd-card/ "Create Card")
+
+*For Raspberry Pi*
+
+Install bmap-tools:
+
+	$ sudo apt-get install bmap-tools
+
+Extract the image you built:
+
+	$ bzip2 -dfk <IMAGE FILENAME>.wic.bz2
+
+Flash the empty device:
+
+	$ sudo bmaptool copy --bmap <IMAGE FILENAME>.wic.bmap <IMAGE FILENAME>.wic /dev/<DEVICE NAME>
+
 
 Hooray you are done!
 

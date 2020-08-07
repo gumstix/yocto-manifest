@@ -144,13 +144,9 @@ Install bmap-tools:
 
 	$ sudo apt-get install bmap-tools
 
-Extract the image you built:
-
-	$ bzip2 -dfk <IMAGE FILENAME>.wic.bz2
-
 Flash the empty device:
 
-	$ sudo bmaptool copy --bmap <IMAGE FILENAME>.wic.bmap <IMAGE FILENAME>.wic /dev/<DEVICE NAME>
+	$ sudo bmaptool copy <IMAGE FILENAME>.wic.bz2 /dev/<DEVICE NAME>
 
 
 Hooray you are done!

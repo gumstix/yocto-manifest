@@ -11,6 +11,9 @@
   <remote name="tegra" fetch="git://github.com/madisongh" />
   <remote name="ossytems" fetch="git://github.com/OSSystems" />
   <remote name="clang" fetch="git://github.com/kraj" />
+  <remote name="toradex" fetch="git://git.toradex.com" />
+  <remote name="freescale" fetch="git://github.com/Freescale" />
+  
 
   <!-- List all the repositories you want to fetch -->
   <!-- "name": git repository's name on hosting server
@@ -31,6 +34,11 @@
   <project name="meta-browser" revision="refs/heads/warrior"  remote="ossytems" path="poky/meta-browser" />
   <project name="meta-clang" revision="refs/heads/warrior"  remote="clang" path="poky/meta-clang" />
   <project name="meta-python2" revision="refs/heads/warrior"  remote="oe" path="poky/meta-python2" />
+  <project name="meta-toradex-nxp" revision="refs/heads/zeus" remote="toradex" path="poky/meta-toradex-nxp" />
+  <project name="meta-freescale" revision="refs/heads/warrior" remote="yocto" path="poky/meta-freescale" />
+  <project name="meta-freescale-3rdparty" revision="refs/heads/warrior" remote="freescale" path="poky/meta-freescale-3rdparty" />
+  <project name="meta-toradex-bsp-common" revision="refs/heads/zeus" remote="toradex" path="poky/meta-toradex-bsp-common" />
+  
 
 </manifest>
 

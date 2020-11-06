@@ -12,6 +12,7 @@
   <remote name="tegra" fetch="git://github.com/madisongh" />
   <remote name="ossytems" fetch="git://github.com/OSSystems" />
   <remote name="clang" fetch="git://github.com/kraj" />
+  <remote name="ros" fetch="git://github.com/ros" />
 
   <!-- List all the repositories you want to fetch -->
   <!-- "name": git repository's name on hosting server
@@ -33,6 +34,7 @@
   <project name="meta-python2" revision="refs/heads/dunfell"  remote="oe" path="poky/meta-python2" />
   <project name="meta-arm" revision="refs/heads/dunfell"  remote="yocto" path="poky/meta-arm" />
   <project name="meta-qt5-extra" revision="refs/heads/master"  remote="qt5-extra" path="poky/meta-qt5-extra" />
+  <project name="meta-ros" revision="5f8eaceece856f892602753d79e9f19920c4d077" remote="ros" path="poky/meta-ros" />
 
 </manifest>
 

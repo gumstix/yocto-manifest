@@ -8,6 +8,7 @@
   <remote name="oe" fetch="git://git.openembedded.org" />
   <remote name="gumstix" fetch="git://github.com/gumstix" />
   <remote name="qt5" fetch="git://github.com/meta-qt5" />
+  <remote name="qt5-mirror" fetch="https://code.qt.io/cgit/yocto" />
   <remote name="qt5-extra" fetch="git://github.com/schnitzeltony" />
   <remote name="tegra" fetch="git://github.com/madisongh" />
   <remote name="ossytems" fetch="git://github.com/OSSystems" />
@@ -26,7 +27,9 @@
   <project name="meta-openembedded" revision="refs/heads/dunfell"  remote="oe" path="poky/meta-openembedded" />
   <project name="meta-gumstix" revision="refs/heads/dunfell"  remote="gumstix" path="poky/meta-gumstix" />
   <project name="meta-gumstix-extras" revision="refs/heads/dunfell" remote="gumstix" path="poky/meta-gumstix-extras" />
-  <project name="meta-qt5" revision="refs/heads/dunfell"  remote="qt5" path="poky/meta-qt5" />
+  <!-- Official meta-qt5 repository is on qt5.14, lxqt requires qt5.15. This can be reverted once metq-qt5/metq-qt5 catches up to qt5.15 -->
+  <!-- <project name="meta-qt5" revision="refs/heads/dunfell"  remote="qt5" path="poky/meta-qt5" /> -->
+  <project name="meta-qt5.git" revision="refs/heads/5.15"  remote="qt5-mirror" path="poky/meta-qt5" />
   <project name="meta-tegra" revision="refs/heads/dunfell-l4t-r32.4.3" remote="tegra" path="poky/meta-tegra" />
   <project name="meta-java" revision="refs/heads/dunfell"  remote="yocto" path="poky/meta-java" />
   <project name="meta-browser" revision="refs/heads/master"  remote="ossytems" path="poky/meta-browser" />

@@ -60,7 +60,7 @@ stored but you should not need to touch this directory.
 ***
 **Note:**
 You can use the **-b** switch to specify the branch of the repository
-to use.  We develop on the guaranteed-to-break **warrior** branch.  Most people should use
+to use.  We develop on the guaranteed-to-break **hardknott** branch.  Most people should use
 the **morty** branch, which should at least compile.
 
 The **-m** switch selects the manifest file (default is *default.xml*).
@@ -69,7 +69,7 @@ particular commits.
 
 To test out the bleeding edge, type:
 
-    $ repo init -u git://github.com/gumstix/yocto-manifest.git -b dunfell 
+    $ repo init -u git://github.com/gumstix/yocto-manifest.git -b hardknott 
     $ repo sync
 
 Note that the default settings for bblayers.conf and local.conf may change
@@ -80,7 +80,7 @@ directory for any corresponding changes needed to the settings in
 
 To get back to the known stable version, type:
 
-    $ repo init -u git://github.com/gumstix/yocto-manifest.git -b warrior
+    $ repo init -u git://github.com/gumstix/yocto-manifest.git -b hardknott 
     $ repo sync
 
 Also you can get a specific version of Yocto Project:
